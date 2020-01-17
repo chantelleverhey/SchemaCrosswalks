@@ -48,9 +48,18 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <div class="dropdown">
   <button class="dropbtn">Dropdown</button>
   <div class="dropdown-content">
-    <a href="#">Link 1</a>
-    <a href="#">Link 2</a>
-    <a href="#">Link 3</a>
+    <a href="#">EOSC/EDMI</a>
+    <a href="#">ISO-19115:2003</a>
+    <a href="#">Dataverse</a>
+    <a href="#">DCAT</a>
+    <a href"#">DATS</a>
+    <a href"#">Datacite</a>
+    <a href"#">RIF-CS</a>
+    <a href"#">DC</a>
+    <a href"#">BioSchema</a>
+    <a href"#">B2FIND</a>
+    <a href"#">DDI</a>
+    <a href"#">ECRIN Clinical Research Metadata Schema</a>
   </div>
 </div>
   <p> Yay </p> </body>
