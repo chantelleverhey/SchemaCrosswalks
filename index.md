@@ -42,6 +42,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 .dropdown:hover .dropdown-content {display: block;}
 
 .dropdown:hover .dropbtn {background-color: #3e8e41;}
+.dropdown-menu {max-height:200px;  overflow:scroll;}
 </style>
 </head>
 <body>
