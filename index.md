@@ -3,7 +3,8 @@
 This pages shows the crosswalks from schemas to schema.org.
 
 Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4OnIVR9UJj3FcOebNUpLnKNBCuvEp3NsLRho4/edit#gid=0)
-https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0SAlbpCtZyKQrs7x86APRy0VKihy1Vi3CIZGJax6UCmsSI4U_FA-2I4g1IgxZ6Ap0hChdzYKFvpJ6/pubhtml?gid=0&single=true
+
+<iframe>https://docs.google.com/spreadsheets/d/e/2PACX-1vQ0SAlbpCtZyKQrs7x86APRy0VKihy1Vi3CIZGJax6UCmsSI4U_FA-2I4g1IgxZ6Ap0hChdzYKFvpJ6/pubhtml?gid=0&single=true</iframe>
 <html>
   <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
