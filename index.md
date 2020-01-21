@@ -26,6 +26,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   display: none;
   position: absolute;
   background-color: #f1f1f1;
+  max-height: 300px;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
