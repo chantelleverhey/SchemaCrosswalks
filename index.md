@@ -25,6 +25,8 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
             float: left;
             overflow-y: auto;
             height: 500px;
+            margin-left: auto;
+            margin-right: auto;
         }
     </style>
 </head>
