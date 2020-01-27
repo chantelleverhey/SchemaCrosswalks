@@ -5,6 +5,2173 @@ This pages shows the crosswalks from schemas to schema.org.
 Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4OnIVR9UJj3FcOebNUpLnKNBCuvEp3NsLRho4/edit#gid=0)
 
 
+<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+<style>
+  table{
+    display: none;
+    text-align: left;
+  }
+  table, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+  td{
+    padding: 10px;
+  }
+  tr:nth-child(even){
+    background-color: #f2f2f2;
+  }
+  tr:hover{
+    background-color: #ddd;
+  }
+  .wrapper{
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+</style>
+
+<select>
+  <option value="-1">Metadata Standards</option>
+  <option value="EOSC">EOSC/EDMI</option>
+  <option value="ISO">ISO-19115:2003</option>
+  <option value="Dataverse">Dataverse</option>
+  <option value="DCAT">DCAT</option>
+  <option value="DATS">DATS</option>
+  <option value="Datacite">Datacite</option>
+  <option value="RIF">RIF-CS</option>
+  <option value="DC">DC</option>
+  <option value="Bioschema">Bioschema</option>
+  <option value="B2FIND">B2FIND</option>
+  <option value="DDI">DDI</option>
+  <option value="ECRIN">ECRIN Clinical Research Metadata Schema</option>
+</select>
+
+<div class="wrapper">
+<table id="EOSC" class="table">
+<tr>
+  <td>EOSC/EDMI</td>
+  <td>description(M)</td>
+  <td>identifier(M)</td>
+  <td>name(M)</td>
+  <td></td>
+  <td>sameAs(O)</td>
+  <td>url(M)</td>
+  <td></td>
+  <td></td>
+  <td>citation(O)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>creator(M)</td>
+  <td>dateCreated(M)</td>
+  <td>dateModified(M)</td>
+  <td>datePublished(O)</td>
+  <td></td>
+  <td></td>
+  <td>format(R)</td>
+  <td></td>
+  <td>keywords(R)</td>
+  <td>license(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>version(O)</td>
+  <td></td>
+  <td>includedIn(Dataset)(R)</td>
+  <td>includes(Dataset)(R)</td>
+  <td></td>
+  <td>spatialCoverage(O)</td>
+  <td>temporalCoverage(O)</td>
+  <td>distribution(R)</td>
+  <td>includedInDataCatalog(R)</td>
+  <td></td>
+  <td></td>
+  <td>variableMeasured(R)</td>
+  <td></td>
+  <td>measurementTechniques(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>scientificType(R)</td>
+  <td>contentType</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="ISO" class="table">
+<tr>
+  <td>ISO-19115:2003</td>
+  <td>Resource description</td>
+  <td>Resource identifier</td>
+  <td>Resource title(M)</td>
+  <td></td>
+  <td></td>
+  <td>Online resource(function: "information")</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Temporal reference: date of last modification</td>
+  <td>Temporal reference: date of publication</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Descriptive keywords</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Responsible party(role: "publisher")</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Geographic extent</td>
+  <td>Temporal extent</td>
+  <td>Distribution information</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Resource language</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Online resource(function: "download"):linkage</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="Dataverse" class="table">
+<tr>
+  <td>Dataverse</td>
+  <td>Description; DescriptionValue(M)</td>
+  <td>Dataset Persistent ID</td>
+  <td>Title(M)</td>
+  <td></td>
+  <td>Alternative URL</td>
+  <td></td>
+  <td></td>
+  <td>Author; authorName(M)</td>
+  <td>Related Publication</td>
+  <td>Contributor</td>
+  <td></td>
+  <td></td>
+  <td>Author</td>
+  <td></td>
+  <td>Version Date</td>
+  <td>Publication Date</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Grant information</td>
+  <td>Subject(M); Topic Classification Term; Keywords</td>
+  <td></td>
+  <td>Producer</td>
+  <td>Dataset Publisher</td>
+  <td>Dataset Publisher</td>
+  <td></td>
+  <td>Version</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Time Period Covered</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Language</td>
+  <td>Distributor</td>
+  <td></td>
+  <td>Kind of Data</td>
+  <td>Data Sources</td>
+  <td>Production Date</td>
+  <td>Depositor</td>
+  <td>Deposit Date</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="DCAT" class="table">
+<tr>
+  <td>DCAT</td>
+  <td>description(M)</td>
+  <td>identifier,other identifier</td>
+  <td>title(M)</td>
+  <td></td>
+  <td></td>
+  <td>accessURL(M); landing page(if no access directly to dataset); homepage</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>owner(O)</td>
+  <td></td>
+  <td>author</td>
+  <td>creation date</td>
+  <td>update/ modification date; modified</td>
+  <td>release date</td>
+  <td></td>
+  <td></td>
+  <td>format; media type</td>
+  <td></td>
+  <td>keywords</td>
+  <td>licence</td>
+  <td></td>
+  <td></td>
+  <td>publisher(M)</td>
+  <td></td>
+  <td>version</td>
+  <td></td>
+  <td>is part of</td>
+  <td>has part</td>
+  <td></td>
+  <td>spatial/ geographic coverage</td>
+  <td>datasetTimeInterval</td>
+  <td>distribution</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>dataset(M)</td>
+  <td></td>
+  <td></td>
+  <td>language</td>
+  <td></td>
+  <td></td>
+  <td>type</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Provenance</td>
+  <td>access URL</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="DATS" class="table">
+<tr>
+  <td>DATS</td>
+  <td>description(R)</td>
+  <td>identifier(R)</td>
+  <td>title(M)</td>
+  <td></td>
+  <td>alternateIdentifier(O)</td>
+  <td>identifier(R)</td>
+  <td></td>
+  <td></td>
+  <td>primaryPublicaion/citations(O)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>creator(M)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>acknowledges(O)</td>
+  <td>keywords(O)</td>
+  <td>licenses(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>version(R)</td>
+  <td></td>
+  <td></td>
+  <td>hasPart(O)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>distribution(R)</td>
+  <td>distribution.storedIn(O)</td>
+  <td></td>
+  <td></td>
+  <td>dimensions(O)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>types(M)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>access(M)</td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="Datacite" class="table">
+<tr>
+  <td>Datacite</td>
+  <td>Description(R)</td>
+  <td>Identifier(M)</td>
+  <td>Title(M)</td>
+  <td></td>
+  <td>RelatedIdentifier</td>
+  <td>valueURL</td>
+  <td></td>
+  <td>creator</td>
+  <td></td>
+  <td>Contributor(R)</td>
+  <td></td>
+  <td></td>
+  <td>Creator(M)</td>
+  <td>Date(R) dateType field indicates the type of date</td>
+  <td>Date(R) dateType field indicates the type of date</td>
+  <td>PublicationYear(M)</td>
+  <td></td>
+  <td></td>
+  <td>Format(R)</td>
+  <td></td>
+  <td></td>
+  <td>Rights</td>
+  <td>contributor with contributortype="Producer"</td>
+  <td></td>
+  <td>Publisher(M)</td>
+  <td></td>
+  <td>Version(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>GeoLocation</td>
+  <td>Date</td>
+  <td>distribution</td>
+  <td>publisher</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Language</td>
+  <td></td>
+  <td></td>
+  <td>ResourceType(M)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="RIF" class="table">
+<tr>
+  <td>RIF-CS</td>
+  <td>collection/description[@type='brief'] OR collection/description[@type='full']</td>
+  <td>collection/citationInfo/citationMetadata/identifier AND/OR collection/identifier</td>
+  <td>registryObject:collection:name (Title as displayed in RDA)</td>
+  <td></td>
+  <td>No mapping</td>
+  <td>RDA key=URL of record. "https://researchdata.ands.org.au/view?key=(insert key)"</td>
+  <td></td>
+  <td>collection/citationInfo/citationMetadata/contributor OR relatedObject|relatedInfo party/name where relation=IsPrincipalInvestigatorOf OR relatedObject|relatedInfo party/name where relation=author OR relatedObject|relatedInfo party/name where relation=coInvestigator  OR relatedObject|relatedInfo party/name where relation=hasCollector</td>
+  <td>collection/relatedInfo[@type='publication'] OR relatedObject:collection where related collection[@type='publication']</td>
+  <td>No mapping</td>
+  <td>No mapping</td>
+  <td>No mapping</td>
+  <td>collection/citationInfo/citationMetadata/contributor OR relatedObject|relatedInfo party/name where relation=IsPrincipalInvestigatorOf OR relatedObject|relatedInfo party/name where relation=coInvestigator OR relatedObject|relatedInfo party/name where relation=hasCollector</td>
+  <td>collection/citationInfo/citationMetadata/date[@type='created'] OR collection/dates[@type='created']</td>
+  <td></td>
+  <td>collection/citationInfo/citationMetadata.date[@type='publicationDate'] OR collection/citationInfo/citationMetadata/date[@type='issued'] OR collection/dates[@type='dc.issued'] OR collection/dates[@type='dc.available'] OR Collection[@dateAccessioned] OR date the record was ingested into RDA</td>
+  <td>No mapping</td>
+  <td>No mapping</td>
+  <td>collection/address/electronic[@target='directDownload']/mediaType</td>
+  <td>relatedObject|relatedInfo party/name where relation=isFundedBy</td>
+  <td>collection/subject</td>
+  <td>collection/rights/licence[@rightsURL] AND/OR collection/rights/licence[@type] AND collcetion/rights/licence</td>
+  <td>No mapping</td>
+  <td>No mapping</td>
+  <td>registryObject:collection:citationInfo:citationMetadata:publisher OR registryObject@Group</td>
+  <td></td>
+  <td>registryObject:collection:citationInfo:citationMetadata:version</td>
+  <td>No mapping</td>
+  <td>relatedObject|relatedInfo collection where relation[@type='isPartOf']</td>
+  <td>relatedObject|relatedInfo collection where relation[@tyoe='hasPart]</td>
+  <td>No mapping</td>
+  <td>collection/coverage/spatial</td>
+  <td>collection/coverage/temporal</td>
+  <td>location/address/electronic @type="url" @ target="directDownload"</td>
+  <td>No mapping</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>registryObject@Group</td>
+  <td>(default to English) "en"</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="DC" class="table">
+<tr>
+  <td>DC</td>
+  <td>Description - dcterms:description</td>
+  <td>Identifier - dcterms:identifier</td>
+  <td>Title - dcterms:title</td>
+  <td></td>
+  <td>relation</td>
+  <td>dc:identifier (if URL)</td>
+  <td></td>
+  <td>Creator</td>
+  <td>dcterms:isReferencedBy</td>
+  <td>Contributor</td>
+  <td></td>
+  <td></td>
+  <td>Creator</td>
+  <td></td>
+  <td>dcterms:modified</td>
+  <td>dcterms:issued</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>dcterms:contributor</td>
+  <td>Subject - dcterms:subject</td>
+  <td>Rights</td>
+  <td></td>
+  <td></td>
+  <td>Publisher - dcterms:publisher</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>dcterms:coverage (spatial)</td>
+  <td>dcterms:temporal (start); dcterms:temporal (end)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Language - dcterms:language</td>
+  <td>dcterms:contributor (Distributor)</td>
+  <td></td>
+  <td>dcterms:type</td>
+  <td>dcterms:source</td>
+  <td>Date - dcterms:date</td>
+  <td>Contributor - dcterms:contributor (Depositor)</td>
+  <td>dcterms:dateSubmitted</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="Bioschema" class="table">
+<tr>
+  <td>Bioschema</td>
+  <td>description(M)</td>
+  <td>identifier(M)</td>
+  <td>name(M)</td>
+  <td></td>
+  <td></td>
+  <td>url(M)</td>
+  <td></td>
+  <td></td>
+  <td>citation(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>creator(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>keywords(M)</td>
+  <td>license(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>version(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>distribution</td>
+  <td>includedInDataCatalog(M)</td>
+  <td>measurementTechnique(R)</td>
+  <td>variablesMeasured(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>rdf.type</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="B2FIND" class="table">
+<tr>
+  <td>B2FIND</td>
+  <td>Description(R)</td>
+  <td>Identifier(M)</td>
+  <td>Title(M)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Contributor(O)</td>
+  <td></td>
+  <td></td>
+  <td>Creator(R)</td>
+  <td></td>
+  <td></td>
+  <td>PublicationYear(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Rights(O)</td>
+  <td></td>
+  <td></td>
+  <td>Publisher(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>SpatialCoverage(O)</td>
+  <td>TemporalCoverage(O)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Language(O)</td>
+  <td></td>
+  <td></td>
+  <td>RecourceType(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="DDI" class="table">
+<tr>
+  <td>DDI</td>
+  <td></td>
+  <td>IDNo</td>
+  <td>titl</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>relPubl</td>
+  <td>AuthEnty</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>distDate (for export)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>keywords</td>
+  <td></td>
+  <td>producer</td>
+  <td></td>
+  <td>distrbtr</td>
+  <td></td>
+  <td>version</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>timePrd</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>distrbtr</td>
+  <td></td>
+  <td>dataKind</td>
+  <td>dataSrc</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<div class="wrapper">
+<table id="ECRIN" class="table">
+<tr>
+  <td>ECRIN </td>
+  <td>Description(R)</td>
+  <td>DOI(M)</td>
+  <td>Object Title(M)</td>
+  <td></td>
+  <td>Related resource identifiers, with relation type indicator(R)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Contributors(O)</td>
+  <td></td>
+  <td></td>
+  <td>Creators(M)</td>
+  <td>Dates (date type)(O)</td>
+  <td>Dates (date type)(O)</td>
+  <td>Creation Year(M)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Rights(O)</td>
+  <td></td>
+  <td></td>
+  <td>Publisher/Provider(M)</td>
+  <td></td>
+  <td>version(O)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Language(R)</td>
+  <td></td>
+  <td></td>
+  <td>Reource Class(M)</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+</tr>
+<tr>
+  <td>Schema.org Property</td>
+  <td>description</td>
+  <td>identifier</td>
+  <td>name</td>
+  <td>alternateName</td>
+  <td>sameAs</td>
+  <td>url</td>
+  <td>relatedLink</td>
+  <td>author</td>
+  <td>citation</td>
+  <td>contributor</td>
+  <td>copyrightHolder</td>
+  <td>copyrightYear</td>
+  <td>creator</td>
+  <td>dateCreated</td>
+  <td>dateModified</td>
+  <td>datePublished</td>
+  <td>editor</td>
+  <td>encoding</td>
+  <td>fileFormat</td>
+  <td>funder</td>
+  <td>keywords</td>
+  <td>license</td>
+  <td>producer</td>
+  <td>provider</td>
+  <td>publisher</td>
+  <td>sponsor</td>
+  <td>version</td>
+  <td>isAccessibleForFree</td>
+  <td>isPartOf</td>
+  <td>hasPart</td>
+  <td>position</td>
+  <td>spatialCoverage</td>
+  <td>temporalCoverage</td>
+  <td>distribution</td>
+  <td>includedInDataCatalog</td>
+  <td>measurementTechnique</td>
+  <td>variableMeasured</td>
+  <td>variablesMeasured</td>
+  <td>dataset</td>
+  <td>measurementTechnique</td>
+  <td>sourceOrganization</td>
+  <td>inLanguage</td>
+  <td></td>
+  <td></td>
+  <td>additionalType</td>
+  <td></td>
+  <td>productionDate</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>contentURL</td>
+  <td>subjectOf</td>
+  <td>about</td>
+</tr>
+<tr>
+  <td>Schema.org Parent Type</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:Dataset</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:DataCatalog</td>
+  <td>schema:CreativeWork</td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>schema:Thing</td>
+  <td>schema:Thing</td>
+  <td>schema:CreativeWork</td>
+</tr>
+</table>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$('select').change(function(){
+    if($(this).val() != "-1")
+    {
+    $('table.table').hide();
+    $('table#'+$(this).val()).show();
+    }
+})
+</script>
 <html lang="en-US">
 <head>
     <title>Schema.org Crosswalk Table</title>
