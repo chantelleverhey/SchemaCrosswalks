@@ -28,6 +28,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
             margin-left: auto;
             margin-right: auto;
         }
+        .wrapper1 thead th{
+           position: sticky;
+           top: 0;
+        }
     </style>
 </head>
 <body class="mt32">
