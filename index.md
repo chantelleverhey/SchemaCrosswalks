@@ -5,34 +5,54 @@ This pages shows the crosswalks from schemas to schema.org.
 Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4OnIVR9UJj3FcOebNUpLnKNBCuvEp3NsLRho4/edit#gid=0)
 
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<style>
-  table{
-    display: none;
-    text-align: left;
-  }
-  table, td{
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-  td{
-    padding: 10px;
-  }
-  tr:nth-child(even){
-    background-color: #f2f2f2;
-  }
-  tr:hover{
-    background-color: #ddd;
-  }
-  .wrapper{
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 1000px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-</style>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Schema.org Crosswalk Table</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+    table{
+        text-align: left;
+    }
+    table.invisible{
+        display: none;
+    }
+    table, td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    td{
+        padding: 10px;
+    }
+    tr:nth-child(even){
+        background-color: #f2f2f2;
+    }
+    tr:hover{
+        background-color: #ddd;
+    }
+    .wrapper{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+    h3 span {
+        font-size: 22px;
+    }
+    h3 input.search-input {
+        width: 300px;
+        margin-left: auto;
+        float: right
+    }
+    .mt32 {
+        margin-top: 32px;
+    }
+    .wrapper1{
+        float: left;
+        overflow-y: auto;
+        height: 500px;
+    }
+    </style>
+</head>
 
 <select>
   <option value="-1">Metadata Standards</option>
@@ -51,7 +71,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </select>
 
 <div class="wrapper">
-<table id="EOSC" class="table">
+<table id="EOSC" class="invisible">
 <tr>
   <td>EOSC/EDMI</td>
   <td>description(M)</td>
@@ -227,7 +247,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="ISO" class="table">
+<table id="ISO" class="invisible">
 <tr>
   <td>ISO-19115:2003</td>
   <td>Resource description</td>
@@ -403,7 +423,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="Dataverse" class="table">
+<table id="Dataverse" class="invisible">
 <tr>
   <td>Dataverse</td>
   <td>Description; DescriptionValue(M)</td>
@@ -579,7 +599,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="DCAT" class="table">
+<table id="DCAT" class="invisible">
 <tr>
   <td>DCAT</td>
   <td>description(M)</td>
@@ -755,7 +775,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="DATS" class="table">
+<table id="DATS" class="invisible">
 <tr>
   <td>DATS</td>
   <td>description(R)</td>
@@ -931,7 +951,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="Datacite" class="table">
+<table id="Datacite" class="invisible">
 <tr>
   <td>Datacite</td>
   <td>Description(R)</td>
@@ -1107,7 +1127,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="RIF" class="table">
+<table id="RIF" class="invisible">
 <tr>
   <td>RIF-CS</td>
   <td>collection/description[@type='brief'] OR collection/description[@type='full']</td>
@@ -1283,7 +1303,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="DC" class="table">
+<table id="DC" class="invisible">
 <tr>
   <td>DC</td>
   <td>Description - dcterms:description</td>
@@ -1459,7 +1479,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="Bioschema" class="table">
+<table id="Bioschema" class="invisible">
 <tr>
   <td>Bioschema</td>
   <td>description(M)</td>
@@ -1635,7 +1655,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="B2FIND" class="table">
+<table id="B2FIND" class="invisible">
 <tr>
   <td>B2FIND</td>
   <td>Description(R)</td>
@@ -1811,7 +1831,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="DDI" class="table">
+<table id="DDI" class="invisible">
 <tr>
   <td>DDI</td>
   <td></td>
@@ -1987,7 +2007,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </div>
 
 <div class="wrapper">
-<table id="ECRIN" class="table">
+<table id="ECRIN" class="invisible">
 <tr>
   <td>ECRIN </td>
   <td>Description(R)</td>
@@ -2161,46 +2181,6 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </tr>
 </table>
 </div>
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-<script>
-$('select').change(function(){
-    if($(this).val() != "-1")
-    {
-    $('table.table').hide();
-    $('table#'+$(this).val()).show();
-    }
-})
-</script>
-<html lang="en-US">
-<head>
-    <title>Schema.org Crosswalk Table</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-    <style type="text/css">
-        h3 span {
-            font-size: 22px;
-        }
-        h3 input.search-input {
-            width: 300px;
-            margin-left: auto;
-            float: right
-        }
-        .mt32 {
-            margin-top: 32px;
-        }
-        .wrapper1{
-            float: left;
-            overflow-y: auto;
-            height: 500px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .wrapper1 thead th{
-           position: sticky;
-           top: 0;
-        }
-    </style>
-</head>
 <body class="mt32">
     <div class="container">
         <h3>
@@ -2208,7 +2188,7 @@ $('select').change(function(){
             <input type="search" placeholder="Search..." class="form-control search-input" data-table="crosswalk-list"/>
         </h3>
         <div class="wrapper1">
-        <table class="table table-striped mt32 crosswalk-list">
+        <table class="table table-striped mt32 crosswalk-list" id="searchTable">
             <thead>
                 <tr>
                     <th>Standard</th>
@@ -3421,4 +3401,14 @@ $('select').change(function(){
         })(document);
     </script>
 </body>
-</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+$('select').change(function(){
+    if($(this).val() != "-1")
+    {
+    $('table.invisible').hide();
+    $('table#'+$(this).val()).show();
+    }
+})
+</script>
