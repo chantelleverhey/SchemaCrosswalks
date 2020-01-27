@@ -49,6 +49,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
     .wrapper1{
         overflow-y: auto;
         height: 500px;
+        width: 1000px;
     }
     </style>
 </head>
