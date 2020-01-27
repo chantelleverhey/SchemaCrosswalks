@@ -50,6 +50,8 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
         overflow-y: auto;
         height: 500px;
         width: 1000px;
+        margin-left: auto;
+        margin-right: auto;
     }
     </style>
 </head>
