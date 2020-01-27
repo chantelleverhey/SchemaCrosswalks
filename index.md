@@ -4,112 +4,1252 @@ This pages shows the crosswalks from schemas to schema.org.
 
 Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4OnIVR9UJj3FcOebNUpLnKNBCuvEp3NsLRho4/edit#gid=0)
 
-<html>
-  <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-.dropbtn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-}
-
-.dropdown-menu {max-height:50px;  overflow:scroll;}
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  max-height: 300px;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown-content a:hover {background-color: #ddd;}
-
-.dropdown:hover .dropdown-content {display: block;}
-
-.dropdown:hover .dropbtn {background-color: #3e8e41;}
-
-</style>
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <title>Schema.org Crosswalk Table</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <style type="text/css">
+        h3 span {
+            font-size: 22px;
+        }
+        h3 input.search-input {
+            width: 300px;
+            margin-left: auto;
+            float: right
+        }
+        .mt32 {
+            margin-top: 32px;
+        }
+        .wrapper1{
+            float: left;
+            overflow-y: auto;
+            height: 500px;
+        }
+    </style>
 </head>
-<body>
-  <div class="dropdown">
-  <button class="dropbtn">Dropdown</button>
-  <div class="dropdown-content">
-    <a href="#">EOSC/EDMI</a>
-    <a href="#">ISO-19115:2003</a>
-    <a href="#">Dataverse</a>
-    <a href="#">DCAT</a>
-    <a href="#">DATS</a>
-    <a href="#">Datacite</a>
-    <a href="#">RIF-CS</a>
-    <a href="#">DC</a>
-    <a href="#">BioSchema</a>
-    <a href="#">B2FIND</a>
-    <a href="#">DDI</a>
-    <a href="#">ECRIN Clinical Research Metadata Schema</a>
-  </div>
-</div>
-  <p> Yay </p> 
+<body class="mt32">
+    <div class="container">
+        <h3>
+            <span>Filter Table Data</span>
+            <input type="search" placeholder="Search..." class="form-control search-input" data-table="crosswalk-list"/>
+        </h3>
+        <div class="wrapper1">
+        <table class="table table-striped mt32 crosswalk-list">
+            <thead>
+                <tr>
+                    <th>Standard</th>
+                    <th>Term</th>
+                    <th>Schema.org crosswalk</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>description(M)</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>identifier(M)</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>name(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>sameAs(O)</td>
+                    <td>sameAs</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>url(M)</td>
+                    <td>url</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>citation(O)</td>
+                    <td>citation</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>creator(M)</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>dateCreated(M)</td>
+                    <td>dateCreated</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>dateModified(M)</td>
+                    <td>dateModified</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>datePublished(O)</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>format(R)</td>
+                    <td>fileFormat</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>keywords(R)</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>license(R)</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>version(O)</td>
+                    <td>version</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>includedIn(Dataset)(R)</td>
+                    <td>isPartOf</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>includes(dataset)(R)</td>
+                    <td>hasPart</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>spatialCoverage(O)</td>
+                    <td>spatialCoverage</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>temporalCoverage(O)</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>distribution(R)</td>
+                    <td>distribution</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>includedInDataCatalog(R)</td>
+                    <td>includedInDataCatalog</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>variableMeasured(R)</td>
+                    <td>variablesMeasured</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>measurementTechniques(R)</td>
+                    <td>measurementTechnique</td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>scientificType(R)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>EOSC/EDMI</td>
+                    <td>contentType</td>
+                    <td>additionalType</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Resource description</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Resource identifier</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Resource title(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Online resource(funtion:"information")</td>
+                    <td>url</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Temporal reference: date of last modification</td>
+                    <td>dateModified</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Temporal reference: date of publication</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Descriptive keywords</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Responsible party(role:"publisher")</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Geographic extent</td>
+                    <td>spatialCoverage</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Temporal extent</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Distribution information</td>
+                    <td>distribution</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Resource language</td>
+                    <td>inLanguage</td>
+                </tr>
+                <tr>
+                    <td>ISO-19115:2003</td>
+                    <td>Online resource(function:"download"):linkage</td>
+                    <td>contentURL</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Description; DescriptionValue(M)</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Dataset Persistent ID</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Title(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Alternative URL</td>
+                    <td>sameAs</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Author; authorName(M)</td>
+                    <td>author</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Related Publication</td>
+                    <td>citation</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Contributor</td>
+                    <td>contributor</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Author</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Version Date</td>
+                    <td>dateModified</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Publication Date</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Grant information</td>
+                    <td>funder</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Subject(M); Topic Classification Term; Keywords</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Producer</td>
+                    <td>producer</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Dataset Publisher</td>
+                    <td>provider</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Dataset Publisher</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Version</td>
+                    <td>version</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Time Period Covered</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Language</td>
+                    <td>inLanguage</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Distributor</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Kind of Data</td>
+                    <td>additionalType</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Data Sources</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Production Date</td>
+                    <td>productionDate</td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Depositor</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Dataverse</td>
+                    <td>Deposit Date</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>description(M)</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>identifier; other identifier</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>title(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>accessURL(M); landing page (if no access directly to dataset); homepage</td>
+                    <td>url</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>owner(O)</td>
+                    <td>copyrightHolder</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>author</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>creation date</td>
+                    <td>dateCreated</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>update/modification date; modified</td>
+                    <td>dateModified</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>release date</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>format; media type</td>
+                    <td>fileFormat</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>keywords</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>licence</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>publisher(M)</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>version</td>
+                    <td>version</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>is part of</td>
+                    <td>isPartOf</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>has part</td>
+                    <td>hasPart</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>spatial/geographic coverage</td>
+                    <td>spatialCoverage</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>datasetTimeInterval</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>distribution</td>
+                    <td>distribution</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>dataset(M)</td>
+                    <td>dataset</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>language</td>
+                    <td>inLanguage</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>type</td>
+                    <td>additionalType</td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>Provenance</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DCAT</td>
+                    <td>access URL</td>
+                    <td>contentURL</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>description(R)</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>identifier(R)</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>title(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>alternateIdentifer(O)</td>
+                    <td>sameAs</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>identifier(R)</td>
+                    <td>url</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>primaryPublications/citations(O)</td>
+                    <td>citation</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>creator(M)</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>acknowledges(O)</td>
+                    <td>funder</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>keywords(O)</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>licenses(R)</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>version(R)</td>
+                    <td>hasPart(O)</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>distribution(R)</td>
+                    <td>distribution</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>distribution.storedIn(O)</td>
+                    <td>includedInDataCatalog</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>dimenstions(O)</td>
+                    <td>variablesMeasured</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>types(M)</td>
+                    <td>additionalType</td>
+                </tr>
+                <tr>
+                    <td>DATS</td>
+                    <td>access(M)</td>
+                    <td>contentURL</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>description(R)</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Identifier(M)</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Title(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>RelatedIdentifier</td>
+                    <td>sameAs</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>valueURL</td>
+                    <td>url</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>creator</td>
+                    <td>author</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Contributor(R)</td>
+                    <td>contributor</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Creator(M)</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Date(R) dateType field indicates the type of date</td>
+                    <td>dateCreated</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Date(R) dateType field indicates the type of date</td>
+                    <td>dateModified</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>PublicationYear(M)</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Format(R)</td>
+                    <td>fileFormat</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Rights</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>contributor with contributortype="Producer"</td>
+                    <td>producer</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Publisher(M)</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Version(R)</td>
+                    <td>version</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>GeoLocation</td>
+                    <td>spatialCoverage</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Date</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>distribution</td>
+                    <td>distribution</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>publisher</td>
+                    <td>includedInDataCatalog</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>Language</td>
+                    <td>inLanguage</td>
+                </tr>
+                <tr>
+                    <td>Datacite</td>
+                    <td>ResrouceType(M)</td>
+                    <td>additionalType</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/description[@type='brief'] OR collection/description[@type='full']</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/citationInfo/citationMetadata/identifier AND/OR collection/identifier</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>registryObject:collection:name (Title as displayed in RDA)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>sameAs</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>RDA key=URL of record. "https://researchdata.ands.org.au/view?key=(insert key)"</td>
+                    <td>url</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/citationInfo/citationMetadata/contributor OR relatedObject|relatedInfo party/name where relation=IsPrincipalInvestigatorOf OR relatedObject|relatedInfo party/name where relation=author OR relatedObject|relatedInfo party/name where relation=coInvestigator  OR relatedObject|relatedInfo party/name where relation=hasCollector</td>
+                    <td>author</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/relatedInfo[@type='publication'] OR relatedObject:collection where related collection[@type='publication']</td>
+                    <td>citation</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>contributor</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>copyrightHolder</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>copyrightYear</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/citationInfo/citationMetadata/contributor OR relatedObject|relatedInfo party/name where relation=IsPrincipalInvestigatorOf OR relatedObject|relatedInfo party/name where relation=coInvestigator OR relatedObject|relatedInfo party/name where relation=hasCollector</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/citationInfo/citationMetadata/date[@type='created'] OR collection/dates[@type='created']</td>
+                    <td>dateCreated</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/citationInfo/citationMetadata.date[@type='publicationDate'] OR collection/citationInfo/citationMetadata/date[@type='issued'] OR collection/dates[@type='dc.issued'] OR collection/dates[@type='dc.available'] OR Collection[@dateAccessioned] OR date the record was ingested into RDA</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>editor</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>encoding</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/address/electronic[@target='directDownload']/mediaType</td>
+                    <td>fileFormat</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>relatedObject|relatedInfo party/name where relation=isFundedBy</td>
+                    <td>funder</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/subject</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/rights/licence[@rightsURL] AND/OR collection/rights/licence[@type] AND collcetion/rights/licence</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>producer</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>provider</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>registryObject:collection:citationInfo:citationMetadata:publisher OR registryObject@Group</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>registryObject:collection:citationInfo:citationMetadata:version</td>
+                    <td>version</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>isAccessibleForFree</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>relatedObject|relatedInfo collection where relation[@type='isPartOf']</td>
+                    <td>isPartOf</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>relatedObject|relatedInfo collection where relation[@tyoe='hasPart]</td>
+                    <td>hasPart</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>position</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/coverage/spatial</td>
+                    <td>spatialCoverage</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>collection/coverage/temporal</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>location/address/electronic @type="url" @ target="directDownload"</td>
+                    <td>distribution</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>No mapping</td>
+                    <td>includedInDataCatalog</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>registryObject@Group</td>
+                    <td>sourceOrganization</td>
+                </tr>
+                <tr>
+                    <td>RIF-CS</td>
+                    <td>(default to English) "en"</td>
+                    <td>inLanguage</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Description - dcterms:description</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Identifer - dcterms:identifier</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Title - dcterms:title</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>relation</td>
+                    <td>sameAs</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dc:identifier (if URL)</td>
+                    <td>url</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Creator</td>
+                    <td>author</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcters:isReferencedBy</td>
+                    <td>citation</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Contributor</td>
+                    <td>contributor</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Creator</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:modified</td>
+                    <td>dateModified</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:issued</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:contributor</td>
+                    <td>funder</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Subject = dcterms:subject</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Rights</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Publisher - dcterms:publisher</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:coverage (spatial)</td>
+                    <td>spatialCoverage</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:temporal (start); dcterms:temporal (end)</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Language - dcterms:language</td>
+                    <td>inLanguage</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:contributor (Distributor)</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:type</td>
+                    <td>additionalType</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:source</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>Date - dcters:date</td>
+                    <td>productionDate</td>
+                </tr>
+                <tr>
+                    <td>DC</td>
+                    <td>dcterms:dateSubmitted</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>description(M)</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>identifier(M)</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>name(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>url(M)</td>
+                    <td>url</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>citation(R)</td>
+                    <td>citation</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>creator(R)</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>keywords(M)</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>license(R)</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>version(R)</td>
+                    <td>version</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>distribution</td>
+                    <td>distribution</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>includedInDataCatalog(M)</td>
+                    <td>includedInDataCatalog</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>measurementTechnique(R)</td>
+                    <td>measurementTechnique</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>variablesMeasured(R)</td>
+                    <td>variablesMeasured</td>
+                </tr>
+                <tr>
+                    <td>BioSchema</td>
+                    <td>rdf.type</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Description(R)</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Identifier(M)</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Title(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Contributor(O)</td>
+                    <td>contributor</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Creator(R)</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>PublicationYear(R)</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Rights(O)</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Publisher(R)</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Spatial Coverage(O)</td>
+                    <td>spatialCoverage</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Temporal Coverage(O)</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>Language(O)</td>
+                    <td>inLanguage</td>
+                </tr>
+                <tr>
+                    <td>B2FIND</td>
+                    <td>ResourceType(R)</td>
+                    <td>additionalType</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>IDNo</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>titl</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>relPubl</td>
+                    <td>relatedLink</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>AuthEnty</td>
+                    <td>author</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>distDate (for export)</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>keywords</td>
+                    <td>keywords</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>producer</td>
+                    <td>producer</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>distrbtr</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>version</td>
+                    <td>version</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>timePrd</td>
+                    <td>temporalCoverage</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>distrbtr</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>dataKind</td>
+                    <td>additionalType</td>
+                </tr>
+                <tr>
+                    <td>DDI</td>
+                    <td>dataSrc</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Description(R)</td>
+                    <td>description</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>DOI(M)</td>
+                    <td>identifier</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Object Title(M)</td>
+                    <td>name</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Related resource identifiers, with relation type indicator(R)</td>
+                    <td>sameAs</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Contributors(O)</td>
+                    <td>contributor</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Creators(M)</td>
+                    <td>creator</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Dates (date type)(O)</td>
+                    <td>dateCreated</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Dates (date type)(O)</td>
+                    <td>dateModified</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Creation Year(M)</td>
+                    <td>datePublished</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Rights(O)</td>
+                    <td>license</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Publisher/Provider(M)</td>
+                    <td>publisher</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>version(O)</td>
+                    <td>version</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Language(R)</td>
+                    <td>inLanguage</td>
+                </tr>
+                <tr>
+                    <td>ECRIN Clinical Research Metadata Schema</td>
+                    <td>Resource Class(M)</td>
+                    <td>additionalType</td>
+                </tr>
+        </tbody>
+        </table>
+        </div>
+    </div>
+    <script>
+        (function(document) {
+            'use strict';
 
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"><link type="text/css" rel="stylesheet" href="resources/sheet.css" >
-<style type="text/css">.ritz .waffle a { color: inherit; }.ritz .waffle .s20{background-color:#ffffff;text-align:left;color:#24292e;font-family:'Arial';font-size:9pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s14{background-color:#ffd966;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s2{background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s16{background-color:#f4cccc;text-align:left;color:#24292e;font-family:'Arial';font-size:9pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s24{background-color:#f3f3f3;text-align:left;color:#24292e;font-family:'docs--apple-system',Arial;font-size:9pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s11{background-color:#93c47d;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s18{background-color:#f4cccc;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s28{background-color:#ffffff;}.ritz .waffle .s32{background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s17{background-color:#f4cccc;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s23{background-color:#93c47d;text-align:left;color:#24292e;font-family:'Arial';font-size:9pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s29{background-color:#f3f3f3;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s3{background-color:#ffffff;text-align:left;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s6{background-color:#ffffff;text-align:left;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s31{background-color:#ffffff;text-align:left;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s5{border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:11pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s10{background-color:#93c47d;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s4{border-right:1px SOLID #000000;background-color:#ffffff;text-align:left;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s22{background-color:#93c47d;text-align:left;color:#24292e;font-family:'docs--apple-system',Arial;font-size:9pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s7{background-color:#93c47d;text-align:left;color:#24292e;font-family:'docs--apple-system',Arial;font-size:9pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s34{border-left: none;background-color:#ffffff;}.ritz .waffle .s30{background-color:#f3f3f3;text-align:left;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s1{background-color:#bdbdbd;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s0{background-color:#bdbdbd;text-align:center;text-decoration:underline;-webkit-text-decoration-skip:none;text-decoration-skip-ink:none;color:#1155cc;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s21{background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s33{border-right: none;background-color:#ffffff;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:nowrap;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s19{background-color:#ffffff;text-align:left;color:#24292e;font-family:'docs--apple-system',Arial;font-size:9pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s8{background-color:#93c47d;text-align:left;color:#24292e;font-family:'Arial';font-size:9pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s26{background-color:#f3f3f3;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s27{background-color:#f3f3f3;text-align:left;color:#24292e;font-family:'Arial';font-size:9pt;vertical-align:bottom;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s9{background-color:#93c47d;text-align:left;color:#000000;font-family:'Arial';font-size:10pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s12{background-color:#ffffff;text-align:left;color:#24292e;font-family:'docs--apple-system',Arial;font-size:9pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s15{background-color:#f4cccc;text-align:left;color:#24292e;font-family:'docs--apple-system',Arial;font-size:9pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s13{background-color:#ffffff;text-align:left;color:#24292e;font-family:'Arial';font-size:9pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}.ritz .waffle .s25{background-color:#f3f3f3;text-align:left;color:#24292e;font-family:'docs--apple-system',Arial;font-size:9pt;vertical-align:top;white-space:normal;overflow:hidden;word-wrap:break-word;direction:ltr;padding:2px 3px 2px 3px;}</style><div class="ritz grid-container" dir="ltr"><table class="waffle" cellspacing="0" cellpadding="0"><thead><tr><th class="row-header"></th><th id="0C0" style="width:137px" class="column-headers-background">A</th><th id="0C1" style="width:105px" class="column-headers-background">B</th><th id="0C2" style="width:100px" class="column-headers-background">C</th><th id="0C3" style="width:171px" class="column-headers-background">D</th><th class="freezebar-cell frozen-column-cell freezebar-vertical-handle"></th><th id="0C4" style="width:100px" class="column-headers-background">E</th><th id="0C5" style="width:100px" class="column-headers-background">F</th><th id="0C6" style="width:100px" class="column-headers-background">G</th><th id="0C7" style="width:130px" class="column-headers-background">H</th><th id="0C8" style="width:100px" class="column-headers-background">I</th><th id="0C9" style="width:121px" class="column-headers-background">J</th><th id="0C10" style="width:237px" class="column-headers-background">K</th><th id="0C11" style="width:186px" class="column-headers-background">L</th><th id="0C12" style="width:100px" class="column-headers-background">M</th><th id="0C13" style="width:100px" class="column-headers-background">N</th><th id="0C14" style="width:100px" class="column-headers-background">O</th><th id="0C15" style="width:100px" class="column-headers-background">P</th><th id="0C16" style="width:100px" class="column-headers-background">Q</th><th id="0C17" style="width:100px" class="column-headers-background">R</th><th id="0C18" style="width:100px" class="column-headers-background">S</th><th id="0C19" style="width:100px" class="column-headers-background">T</th><th id="0C20" style="width:100px" class="column-headers-background">U</th><th id="0C21" style="width:100px" class="column-headers-background">V</th><th id="0C22" style="width:100px" class="column-headers-background">W</th><th id="0C23" style="width:100px" class="column-headers-background">X</th><th id="0C24" style="width:100px" class="column-headers-background">Y</th><th id="0C25" style="width:100px" class="column-headers-background">Z</th><th id="0C26" style="width:100px" class="column-headers-background">AA</th></tr></thead><tbody><tr style='height:20px;'><th id="0R0" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">1</div></th><td class="s0" dir="ltr" colspan="4"><a target="_blank" href="https://schema.org/version/3.9/schema-all.html">Schema.org</a></td><td class="freezebar-cell"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1"></td><td class="s1" dir="ltr"></td><td class="s1" dir="ltr"></td><td class="s1" dir="ltr"></td><td class="s1" dir="ltr"></td><td class="s1" dir="ltr"></td><td class="s1" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R1" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">2</div></th><td class="s2" dir="ltr">Parent Type</td><td class="s2" dir="ltr">Property</td><td class="s2" dir="ltr">Type</td><td class="s2" dir="ltr">Description</td><td class="freezebar-cell"></td><td class="s3"><a target="_blank" href="https://docs.google.com/spreadsheets/d/1dtHpbp5cVaooVdqhvDjLHKM5Y8IfC-iRSU6OA6BLSUg/edit#gid=1692609231">EOSC/EDMI</a></td><td class="s3" dir="ltr"><a target="_blank" href="https://www.w3.org/2015/spatial/wiki/ISO_19115_-_DCAT_-_Schema.org_mapping">ISO-19115:2003</a></td><td class="s4"><a target="_blank" href="https://docs.google.com/spreadsheets/d/10Luzti7svVTVKTA-px27oq3RxCUM-QbiTkm8iMd5C54/edit#gid=0">Dataverse</a></td><td class="s5" dir="ltr"><a target="_blank" href="https://ec-jrc.github.io/dcat-ap-to-schema-org/">DCAT</a></td><td class="s3" dir="ltr"><a target="_blank" href="https://docs.google.com/spreadsheets/d/1NZl3DpmyHLBTBieNcT5iNb2gNoauOnJDdWUyyv2WUIo/edit#gid=0">DATS</a></td><td class="s3" dir="ltr"><a target="_blank" href="https://docs.google.com/spreadsheets/d/1NZl3DpmyHLBTBieNcT5iNb2gNoauOnJDdWUyyv2WUIo/edit#gid=0">Datacite</a></td><td class="s3" dir="ltr"><a target="_blank" href="https://documentation.ands.org.au/display/DOC/RIF-CS+to+Schema.org+crosswalk">RIF-CS</a></td><td class="s6"><a target="_blank" href="https://docs.google.com/spreadsheets/d/10Luzti7svVTVKTA-px27oq3RxCUM-QbiTkm8iMd5C54/edit#gid=0">DC </a></td><td class="s3" dir="ltr"><a target="_blank" href="https://docs.google.com/spreadsheets/d/16HNJVKUdueVIPEdcp3x2HXI0RJ4zrlpQWrTIkAf-lB4/edit#gid=0">BioSchema</a></td><td class="s3" dir="ltr"><a target="_blank" href="http://b2find.eudat.eu/guidelines/mapping.html">B2FIND</a></td><td class="s3" dir="ltr"><a target="_blank" href="https://docs.google.com/spreadsheets/d/10Luzti7svVTVKTA-px27oq3RxCUM-QbiTkm8iMd5C54/edit#gid=0">DDI</a></td><td class="s3" dir="ltr"><a target="_blank" href="https://zenodo.org/record/1312539#.XdHWklczbIW">ECRIN Clinical Research Metadata Schema </a></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr><th style="height:3px" class="freezebar-cell freezebar-horizontal-handle"></th><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td><td class="freezebar-cell"></td></tr><tr style='height:20px;'><th id="0R2" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">3</div></th><td class="s7" dir="ltr">schema:Thing</td><td class="s8" dir="ltr">description </td><td class="s7" dir="ltr">Text</td><td class="s7" dir="ltr">A description of the item.</td><td class="freezebar-cell"></td><td class="s9" dir="ltr">description (M)</td><td class="s9" dir="ltr">Resource description</td><td class="s9" dir="ltr">Description; DescriptionValue (M)</td><td class="s9" dir="ltr">description (M)</td><td class="s9" dir="ltr">description (R)</td><td class="s9" dir="ltr">Description (R)</td><td class="s9" dir="ltr">collection/description[@type=&#39;brief&#39;]<br>OR<br>collection/description[@type=&#39;full&#39;]</td><td class="s9" dir="ltr">Description - dcterms:description</td><td class="s9" dir="ltr">description (M)</td><td class="s9" dir="ltr">Description (R)</td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr">Description (R)</td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R3" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">4</div></th><td class="s7" dir="ltr">schema:Thing</td><td class="s7" dir="ltr">identifier</td><td class="s7" dir="ltr">PropertyValue or URL</td><td class="s7" dir="ltr">The identifier property represents any kind of identifier for any kind of Thing, such as ISBNs, GTIN codes, UUIDs etc. Schema.org provides dedicated properties for representing many of these, either as textual strings or as URL (URI) links. See background notes for more details.</td><td class="freezebar-cell"></td><td class="s11" dir="ltr">identifier (M)</td><td class="s9" dir="ltr">Resource identifier</td><td class="s9" dir="ltr">Dataset Persistent ID</td><td class="s9" dir="ltr">identifier; other identifier</td><td class="s9" dir="ltr">identifier (R)</td><td class="s9" dir="ltr">Identifier (M)</td><td class="s9" dir="ltr">collection/citationInfo/citationMetadata/identifier<br>AND/OR<br>collection/identifier<br></td><td class="s9" dir="ltr">Identifier - dcterms:identifier</td><td class="s9" dir="ltr">identifier (M)</td><td class="s9" dir="ltr">Identifier (M)</td><td class="s9" dir="ltr">IDNo</td><td class="s9" dir="ltr">DOI (M)</td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R4" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">5</div></th><td class="s7" dir="ltr">schema:Thing</td><td class="s8" dir="ltr">name</td><td class="s7" dir="ltr">Text</td><td class="s8" dir="ltr">A descriptive name of the item (e.g. dataset, software, Organization). </td><td class="freezebar-cell"></td><td class="s9" dir="ltr">name (M)</td><td class="s9" dir="ltr">Resource title (M)</td><td class="s9" dir="ltr">Title (M)</td><td class="s9" dir="ltr">title (M)</td><td class="s9" dir="ltr">title (M)</td><td class="s9" dir="ltr">Title (M)</td><td class="s9" dir="ltr">registryObject:collection:name<br>(Title as displayed in RDA)</td><td class="s9" dir="ltr">Title - dcterms:title</td><td class="s9" dir="ltr">name (M)</td><td class="s9" dir="ltr">Title (M)</td><td class="s9" dir="ltr">titl</td><td class="s9" dir="ltr">Object Title (M)</td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R5" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">6</div></th><td class="s12">schema:Thing</td><td class="s13" dir="ltr">alternateName</td><td class="s12">Text</td><td class="s13" dir="ltr">An alias for the item <br></td><td class="freezebar-cell"></td><td class="s11" dir="ltr"></td><td class="s9"></td><td class="s9" dir="ltr"></td><td class="s9"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R6" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">7</div></th><td class="s7" dir="ltr">schema:Thing</td><td class="s8" dir="ltr">sameAs</td><td class="s7" dir="ltr">URL</td><td class="s7" dir="ltr">URL of a reference Web page that unambiguously indicates the item&#39;s identity. E.g. the URL of the item&#39;s Wikipedia page, Wikidata entry, or official website.</td><td class="freezebar-cell"></td><td class="s11" dir="ltr">sameAs (O)</td><td class="s9"></td><td class="s9" dir="ltr">Alternative URl</td><td class="s9"></td><td class="s14" dir="ltr">alternateIdentifier (O)</td><td class="s9" dir="ltr">RelatedIdentifer</td><td class="s9" dir="ltr">No mapping</td><td class="s9" dir="ltr">relation</td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr">Related resource identifiers, with relation type indicator (R)</td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R7" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">8</div></th><td class="s7" dir="ltr">schema:Thing</td><td class="s7" dir="ltr">url</td><td class="s7" dir="ltr">URL</td><td class="s7" dir="ltr">URL of the item.</td><td class="freezebar-cell"></td><td class="s9" dir="ltr">url (M)</td><td class="s9" dir="ltr">Online resource (function: information&quot;)</td><td class="s9"></td><td class="s9" dir="ltr">accessURL (M); landing page (if no access directly to dataset); homepage</td><td class="s9" dir="ltr">identifier (R)</td><td class="s9" dir="ltr">valueURL</td><td class="s9" dir="ltr">RDA key= URL of record.<br>&quot;https://researchdata.ands.org.au/view?key=&lt;insert key&gt;&quot;</td><td class="s9" dir="ltr">dc:identifier (if URL)</td><td class="s9" dir="ltr">url (M)</td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s9" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R8" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">9</div></th><td class="s15" dir="ltr">schema:Thing</td><td class="s16" dir="ltr">relatedLink</td><td class="s15" dir="ltr">URL</td><td class="s15" dir="ltr">A link related to this object, e.g. related web pages</td><td class="freezebar-cell"></td><td class="s17"></td><td class="s17"></td><td class="s17"></td><td class="s17"></td><td class="s17"></td><td class="s17" dir="ltr"></td><td class="s17"></td><td class="s17"></td><td class="s17"></td><td class="s17"></td><td class="s18" dir="ltr">relPubl</td><td class="s17" dir="ltr"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td><td class="s18"></td></tr><tr style='height:20px;'><th id="0R9" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">10</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s20" dir="ltr">author</td><td class="s19" dir="ltr">Organization or Person</td><td class="s13" dir="ltr">The author of this content or rating. Please note that author is special in that HTML 5 provides a special mechanism for indicating authorship via the rel tag. That is equivalent to this and may be used interchangeably.</td><td class="freezebar-cell"></td><td class="s19" dir="ltr"></td><td class="s19"></td><td class="s20" dir="ltr">Author; authorName (M)</td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">creator</td><td class="s21" dir="ltr">collection/citationInfo/citationMetadata/contributor<br>OR<br>relatedObject|relatedInfo party/name where relation=IsPrincipalInvestigatorOf<br>OR<br>relatedObject|relatedInfo party/name where relation=author<br>OR<br>relatedObject|relatedInfo party/name where relation=coInvestigator<br>OR<br>relatedObject|relatedInfo party/name where relation=hasCollector</td><td class="s21" dir="ltr">Creator</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">AuthEnty</td><td class="s21" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R10" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">11</div></th><td class="s22" dir="ltr">schema:CreativeWork</td><td class="s22" dir="ltr">citation</td><td class="s22" dir="ltr">CreativeWork or URL</td><td class="s7" dir="ltr">A citation or reference to another creative work, such as another publication, web page, scholarly article, etc.</td><td class="freezebar-cell"></td><td class="s23" dir="ltr">citation (O)</td><td class="s22"></td><td class="s23" dir="ltr">Related Publication</td><td class="s11"></td><td class="s11" dir="ltr">primaryPublication/ citations (O)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">collection/relatedInfo[@type=&#39;publication&#39;]<br>OR<br>relatedObject:collection where related collection [@type=&#39;publication&#39;]</td><td class="s11" dir="ltr">dcterms:isReferencedBy</td><td class="s11" dir="ltr">citation (R)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R11" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">12</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">contributor</td><td class="s19" dir="ltr">Organization or Person</td><td class="s12" dir="ltr">A secondary contributor to the CreativeWork or Event.</td><td class="freezebar-cell"></td><td class="s19" dir="ltr"></td><td class="s19"></td><td class="s20" dir="ltr">Contributor</td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">Contributor (R)</td><td class="s21" dir="ltr">No mapping</td><td class="s21" dir="ltr">Contributor</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">Contributor (O)</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">Contributors (O)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R12" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">13</div></th><td class="s24" dir="ltr">schema:CreativeWork</td><td class="s24" dir="ltr">copyrightHolder</td><td class="s24" dir="ltr">Organization or Person</td><td class="s25" dir="ltr">The party holding the legal copyright to the CreativeWork.</td><td class="freezebar-cell"></td><td class="s24"></td><td class="s24"></td><td class="s24"></td><td class="s26" dir="ltr">owner (O)</td><td class="s26"></td><td class="s26"></td><td class="s26" dir="ltr">No mapping</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R13" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">14</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">copyrightYear</td><td class="s19" dir="ltr">Number</td><td class="s12" dir="ltr">The year during which the claimed copyright for the CreativeWork was first asserted.</td><td class="freezebar-cell"></td><td class="s19"></td><td class="s19"></td><td class="s19"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">No mapping</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R14" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">15</div></th><td class="s22" dir="ltr">schema:CreativeWork</td><td class="s22" dir="ltr">creator</td><td class="s22" dir="ltr">Organization or Person</td><td class="s8" dir="ltr">The creator/author of this CreativeWork (dataset). This is the same as the Author property for CreativeWork.<br><br> To uniquely identify individuals, use ORCID ID as the value of the sameAs property of the Person type. To uniquely identify institutions and organizations, use ROR ID. </td><td class="freezebar-cell"></td><td class="s23" dir="ltr">creator (M)</td><td class="s22"></td><td class="s23" dir="ltr">Author</td><td class="s11" dir="ltr">author</td><td class="s11" dir="ltr">creator (M)</td><td class="s11" dir="ltr">Creator (M) </td><td class="s11" dir="ltr">collection/citationInfo/citationMetadata/contributor<br>OR<br>relatedObject|relatedInfo party/name where relation=IsPrincipalInvestigatorOf<br>OR<br>relatedObject|relatedInfo party/name where relation=author<br>OR<br>relatedObject|relatedInfo party/name where relation=coInvestigator<br>OR<br>relatedObject|relatedInfo party/name where relation=hasCollector</td><td class="s11" dir="ltr">Creator</td><td class="s11" dir="ltr">creator (R)</td><td class="s11" dir="ltr">Creator (R)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">Creators (M)</td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R15" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">16</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">dateCreated</td><td class="s19" dir="ltr">Date or DateTime</td><td class="s12" dir="ltr">The date on which the CreativeWork was created or the item was added to a DataFeed.</td><td class="freezebar-cell"></td><td class="s20" dir="ltr">dateCreated (M)</td><td class="s19"></td><td class="s19"></td><td class="s21" dir="ltr">creation date</td><td class="s21"></td><td class="s21" dir="ltr">Date (R) dateType field indicates the type of date </td><td class="s21" dir="ltr">collection/citationInfo/citationMetadata/date[@type= &#39;created&#39;]<br>OR<br>collection/dates[@type=&#39;created&#39;]</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">Dates (date type) (O)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R16" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">17</div></th><td class="s24" dir="ltr">schema:CreativeWork</td><td class="s24" dir="ltr">dateModified</td><td class="s24" dir="ltr">Date or DateTime</td><td class="s25" dir="ltr">The date on which the CreativeWork was most recently modified or when the item&#39;s entry was modified within a DataFeed.</td><td class="freezebar-cell"></td><td class="s24" dir="ltr"><br><span style="font-family:Arial;">dateModified (M)</span></td><td class="s27" dir="ltr">Temporal reference: date of last modification</td><td class="s27" dir="ltr">Version Date</td><td class="s26" dir="ltr">update/ modification date; modified</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">Date (R) dateType field indicates the type of date </td><td class="s26"></td><td class="s26" dir="ltr">dcterms:modified</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">Dates (date type) (O)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R17" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">18</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">datePublished</td><td class="s20" dir="ltr">Date</td><td class="s12" dir="ltr">Date of first broadcast/publication.</td><td class="freezebar-cell"></td><td class="s19" dir="ltr"><br><span style="font-family:Arial;">datePublished (O)</span></td><td class="s20" dir="ltr">Temporal reference: date of publication</td><td class="s20" dir="ltr">Publication Date</td><td class="s21" dir="ltr">release date</td><td class="s21"></td><td class="s21" dir="ltr">PublicationYear (M)</td><td class="s21" dir="ltr">collection/citationInfo/citationMetadata/date[@type=&#39;publicationDate&#39;]<br>OR<br>collection/citationInfo/citationMetadata/date[@type=&#39;issued&#39;]<br>OR<br>collection/dates[@type=&#39;dc.issued&#39;]<br>OR<br>collection/dates[@type=&#39;dc.available&#39;]<br>OR<br>Collection[@dateAccessioned]<br>OR<br>date the record was ingested into RDA</td><td class="s21" dir="ltr">dcterms:issued</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">PublicationYear (R)</td><td class="s21" dir="ltr">distDate (for export)</td><td class="s21" dir="ltr">Creation Year (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R18" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">19</div></th><td class="s24" dir="ltr">schema:CreativeWork</td><td class="s24" dir="ltr">editor</td><td class="s24" dir="ltr">Person</td><td class="s25" dir="ltr">Specifies the Person who edited the CreativeWork.</td><td class="freezebar-cell"></td><td class="s24"></td><td class="s24" dir="ltr"></td><td class="s24"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26" dir="ltr">No mapping</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R19" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">20</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">encoding</td><td class="s19" dir="ltr">MediaObject</td><td class="s12" dir="ltr">A media object that encodes this CreativeWork. This property is a synonym for associatedMedia. Supersedes encodings.</td><td class="freezebar-cell"></td><td class="s19"></td><td class="s19"></td><td class="s19"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">No mapping</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R20" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">21</div></th><td class="s24" dir="ltr">schema:CreativeWork</td><td class="s24" dir="ltr">fileFormat</td><td class="s24" dir="ltr">Text or URL</td><td class="s25" dir="ltr">Media type, typically MIME format (see IANA site) of the content e.g. application/zip of a SoftwareApplication binary. In cases where a CreativeWork has several media type representations, &#39;encoding&#39; can be used to indicate each MediaObject alongside particular fileFormat information. Unregistered or niche file formats can be indicated instead via the most appropriate URL, e.g. defining Web page or a Wikipedia entry.</td><td class="freezebar-cell"></td><td class="s27" dir="ltr">format (R)</td><td class="s24"></td><td class="s24"></td><td class="s26" dir="ltr">format; media type</td><td class="s26"></td><td class="s26" dir="ltr">Format (R)</td><td class="s26" dir="ltr">collection/address/electronic[@target=&#39;directDownload&#39;]/mediaType        </td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R21" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">22</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">funder</td><td class="s19" dir="ltr">Organization or Person</td><td class="s12" dir="ltr">A person or organization that supports (sponsors) something through some kind of financial contribution.</td><td class="freezebar-cell"></td><td class="s19"></td><td class="s19"></td><td class="s20" dir="ltr">Grant information</td><td class="s21"></td><td class="s21" dir="ltr">acknowledges (O)</td><td class="s21"></td><td class="s21" dir="ltr">relatedObject|relatedInfo party/name where relation=isFundedBy        </td><td class="s21" dir="ltr">dcterms:contributor</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R22" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">23</div></th><td class="s22" dir="ltr">schema:CreativeWork</td><td class="s22" dir="ltr">keywords</td><td class="s22" dir="ltr">Text</td><td class="s7" dir="ltr">Keywords or tags used to describe this content. Multiple entries in a keywords list are typically delimited by commas.</td><td class="freezebar-cell"></td><td class="s23" dir="ltr">keywords (R)</td><td class="s23" dir="ltr">Descriptive keywords</td><td class="s23" dir="ltr">Subject (M); Topic Classification Term; Keywords</td><td class="s11" dir="ltr">keywords</td><td class="s11" dir="ltr">keywords (O)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">collection/subject        </td><td class="s11" dir="ltr">Subject - dcterms:subject</td><td class="s11" dir="ltr">keywords (M)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">keywords</td><td class="s11" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R23" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">24</div></th><td class="s22" dir="ltr">schema:CreativeWork</td><td class="s22" dir="ltr">license</td><td class="s22" dir="ltr">CreativeWork or URL</td><td class="s8" dir="ltr">A license document that applies to this content, typically indicated by URL.<br><br>(A license under which the dataset is distributed.)</td><td class="freezebar-cell"></td><td class="s23" dir="ltr">license (R)</td><td class="s22" dir="ltr"></td><td class="s22" dir="ltr"></td><td class="s11" dir="ltr">licence </td><td class="s11" dir="ltr">licenses (R)</td><td class="s11" dir="ltr">Rights</td><td class="s11" dir="ltr">collection/rights/licence[@rightsURI]<br>AND/OR<br>collection/rights/licence[@type]<br>AND<br>collection/rights/licence</td><td class="s11" dir="ltr">Rights</td><td class="s11" dir="ltr">license (R)</td><td class="s11" dir="ltr">Rights (O)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">Rights (O)</td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R24" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">25</div></th><td class="s24" dir="ltr">schema:CreativeWork</td><td class="s24" dir="ltr">producer</td><td class="s24" dir="ltr">Organization or Person</td><td class="s25" dir="ltr">The person or organization who produced the work (e.g. music album, movie, tv/radio series etc.).</td><td class="freezebar-cell"></td><td class="s24"></td><td class="s24"></td><td class="s27" dir="ltr">Producer</td><td class="s26"></td><td class="s26"></td><td class="s26" dir="ltr">contributor with contributortype=&quot;Producer&quot;</td><td class="s26" dir="ltr">No mapping</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">producer</td><td class="s26" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R25" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">26</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">provider</td><td class="s19" dir="ltr">Organization or Person</td><td class="s12" dir="ltr">The service provider, service operator, or service performer; the goods producer. Another party (a seller) may offer those services or goods on behalf of the provider. A provider may also serve as the seller. Supersedes carrier.</td><td class="freezebar-cell"></td><td class="s19"></td><td class="s19"></td><td class="s20" dir="ltr">Dataset Publisher</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">No mapping</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R26" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">27</div></th><td class="s24" dir="ltr">schema:CreativeWork</td><td class="s24" dir="ltr">publisher</td><td class="s24" dir="ltr">Organization or Person</td><td class="s25" dir="ltr">The publisher of the creative work.</td><td class="freezebar-cell"></td><td class="s24" dir="ltr"></td><td class="s27" dir="ltr">Responsible party (role: &quot;publisher&quot;)</td><td class="s27" dir="ltr">Dataset Publisher</td><td class="s26" dir="ltr">publisher (M)</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">Publisher (M)</td><td class="s26" dir="ltr">registryObject:collection:citationInfo:citationMetadata:publisher OR registryObject@Group</td><td class="s26" dir="ltr">Publisher - dcterms:publisher</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">Publisher (R)</td><td class="s26" dir="ltr">distrbtr</td><td class="s26" dir="ltr">Publisher/ Provider (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R27" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">28</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">sponsor</td><td class="s19" dir="ltr">Organization or Person</td><td class="s12" dir="ltr">A person or organization that supports a thing through a pledge, promise, or financial contribution. e.g. a sponsor of a Medical Study or a corporate sponsor of an event.</td><td class="freezebar-cell"></td><td class="s19"></td><td class="s19"></td><td class="s19"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s28"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R28" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">29</div></th><td class="s22" dir="ltr">schema:CreativeWork</td><td class="s22" dir="ltr">version</td><td class="s22" dir="ltr">Number or Text</td><td class="s7" dir="ltr">The version of the CreativeWork embodied by a specified resource.</td><td class="freezebar-cell"></td><td class="s22" dir="ltr"><br><span style="font-family:Arial;">version (O)</span></td><td class="s22"></td><td class="s23" dir="ltr">Version</td><td class="s11" dir="ltr">version</td><td class="s11" dir="ltr">version (R)</td><td class="s11" dir="ltr">Version (R)</td><td class="s11" dir="ltr">registryObject:collection:citationInfo:citationMetadata:version</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">version (R)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">version</td><td class="s11" dir="ltr">version (O)</td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R29" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">30</div></th><td class="s19" dir="ltr">schema:CreativeWork</td><td class="s19" dir="ltr">isAccessibleForFree</td><td class="s19" dir="ltr">Boolean</td><td class="s12" dir="ltr">A flag to signal that the publication is accessible for free.</td><td class="freezebar-cell"></td><td class="s19"></td><td class="s19"></td><td class="s19"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">No mapping</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R30" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">31</div></th><td class="s22" dir="ltr">schema:CreativeWork</td><td class="s22" dir="ltr">isPartOf</td><td class="s22" dir="ltr">CreativeWork</td><td class="s8" dir="ltr">Indicates a CreativeWork that this CreativeWork is (in some sense) part of. Reverse property hasPart.<br><br>If the dataset is a collection of smaller datasets, use the hasPart property to denote such relationship. Conversly, if the dataset is part of a larger dataset, use isPartOf.</td><td class="freezebar-cell"></td><td class="s22" dir="ltr"><br><span style="font-family:Arial;">includedIn(Dataset) (R)</span></td><td class="s22"></td><td class="s22" dir="ltr"></td><td class="s11" dir="ltr">is part of</td><td class="s11"></td><td class="s11"></td><td class="s11" dir="ltr">relatedObject|relatedInfo collection where relation[@type=&#39;isPartOf&#39;]        </td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R31" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">32</div></th><td class="s22" dir="ltr">schema:CreativeWork</td><td class="s22" dir="ltr">hasPart</td><td class="s22" dir="ltr">CreativeWork</td><td class="s7" dir="ltr">Indicates a CreativeWork that is (in some sense) a part of this CreativeWork. Reverse property isPartOf</td><td class="freezebar-cell"></td><td class="s23" dir="ltr">includes(Dataset) (R)</td><td class="s22"></td><td class="s22"></td><td class="s11" dir="ltr">has part</td><td class="s11" dir="ltr">hasPart (O)</td><td class="s11"></td><td class="s11" dir="ltr">relatedObject|relatedInfo collection where relation[@type=&#39;hasPart&#39;]        </td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R32" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">33</div></th><td class="s24" dir="ltr">schema:CreativeWork</td><td class="s24" dir="ltr">position</td><td class="s24" dir="ltr">Integer or Text</td><td class="s25" dir="ltr">The position of an item in a series or sequence of items. (While schema.org considers this a property of CreativeWork, it is also the way to indicate ordering in any list (e.g. the Authors list). By default arrays are unordered in JSON-LD</td><td class="freezebar-cell"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26" dir="ltr">No mapping</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R33" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">34</div></th><td class="s9" dir="ltr">schema:CreativeWork</td><td class="s9" dir="ltr">spatialCoverage</td><td class="s9" dir="ltr">Text, Place</td><td class="s9" dir="ltr">You can provide a single point that describes the spatial aspect of the dataset. Only include this property if the dataset has a spatial dimension. </td><td class="freezebar-cell"></td><td class="s11" dir="ltr">spatialCoverage (O)</td><td class="s11" dir="ltr">Geographic extent</td><td class="s11"></td><td class="s11" dir="ltr">spatial/ geographic coverage</td><td class="s11"></td><td class="s11" dir="ltr">GeoLocation</td><td class="s11" dir="ltr">collection/coverage/spatial</td><td class="s11" dir="ltr">dcterms:coverage (spatial)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">Spatial Coverage (O)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R34" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">35</div></th><td class="s9" dir="ltr">schema:CreativeWork</td><td class="s9" dir="ltr">temporalCoverage</td><td class="s9" dir="ltr">Text</td><td class="s9" dir="ltr">The data in the dataset covers a specific time interval. Only include this property if the dataset has a temporal dimension.</td><td class="freezebar-cell"></td><td class="s11" dir="ltr">temporalCoverage (O)</td><td class="s11" dir="ltr">Temporal extent</td><td class="s11" dir="ltr">Time Period Covered</td><td class="s11" dir="ltr">datasetTimeInterval</td><td class="s11"></td><td class="s11" dir="ltr">Date</td><td class="s11" dir="ltr">collection/coverage/temporal</td><td class="s11" dir="ltr">dcterms:temporal (start); dcterms:temporal (end)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr">Temporal Coverage (O)</td><td class="s11" dir="ltr">timePrd</td><td class="s11" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R35" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">36</div></th><td class="s2" dir="ltr">schema:Dataset</td><td class="s2" dir="ltr">distribution</td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21" dir="ltr">distribution (R)</td><td class="s21" dir="ltr">Distribution information</td><td class="s21"></td><td class="s21" dir="ltr"> distribution</td><td class="s21" dir="ltr">distribution (R)</td><td class="s21" dir="ltr">distribution</td><td class="s21" dir="ltr">location/address/electronic @type=&quot;url&quot; @ target=&quot;directDownload&quot;</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">distribution</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R36" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">37</div></th><td class="s29" dir="ltr">schema:Dataset</td><td class="s29" dir="ltr">includedInDataCatalog</td><td class="s29"></td><td class="s29"></td><td class="freezebar-cell"></td><td class="s26" dir="ltr">includedInDataCatalog (R)</td><td class="s26"></td><td class="s26" dir="ltr"></td><td class="s26"></td><td class="s26" dir="ltr">distribution.storedIn (O)</td><td class="s26" dir="ltr">publisher</td><td class="s26" dir="ltr">No mapping</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">includedInDataCatalog (M)</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R37" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">38</div></th><td class="s2" dir="ltr">schema:Dataset</td><td class="s2" dir="ltr">measurementTechnique</td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">measurementTechnique (R)</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R38" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">39</div></th><td class="s9" dir="ltr">schema:Dataset</td><td class="s9" dir="ltr">variableMeasured</td><td class="s9"></td><td class="s9"></td><td class="freezebar-cell"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11"></td><td class="s11" dir="ltr">variablesMeasured (R)</td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s11" dir="ltr"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td><td class="s10"></td></tr><tr style='height:20px;'><th id="0R39" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">40</div></th><td class="s2" dir="ltr">schema:Dataset</td><td class="s2" dir="ltr">variablesMeasured</td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21" dir="ltr">variableMeasured (R)</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">dimensions (O)</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R40" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">41</div></th><td class="s29" dir="ltr">schema:DataCatalog</td><td class="s29" dir="ltr">dataset</td><td class="s29"></td><td class="s29"></td><td class="freezebar-cell"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26" dir="ltr">dataset (M)</td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R41" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">42</div></th><td class="s2" dir="ltr">schema:DataCatalog</td><td class="s2" dir="ltr">measurementTechnique</td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21" dir="ltr">measurementTechniques (R)</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R42" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">43</div></th><td class="s29" dir="ltr">schema:CreativeWork</td><td class="s30"><a target="_blank" href="https://schema.org/sourceOrganization">sourceOrganization</a></td><td class="s29" dir="ltr">Text</td><td class="s29"></td><td class="freezebar-cell"></td><td class="s26" dir="ltr"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">registryObject@Group</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R43" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">44</div></th><td class="s2" dir="ltr">schema:Thing</td><td class="s31"><a target="_blank" href="https://schema.org/inLanguage">inLanguage</a></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">Resource language</td><td class="s21" dir="ltr">Language</td><td class="s21" dir="ltr">language</td><td class="s21"></td><td class="s21" dir="ltr">Language</td><td class="s21" dir="ltr">(default to English) &quot;en&quot;</td><td class="s21" dir="ltr">Language - dcterms:language</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">Language (O)</td><td class="s21" dir="ltr"></td><td class="s21" dir="ltr">Language (R)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R44" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">45</div></th><td class="s29" dir="ltr"></td><td class="s29" dir="ltr"></td><td class="s29"></td><td class="s29"></td><td class="freezebar-cell"></td><td class="s26" dir="ltr"></td><td class="s26"></td><td class="s26" dir="ltr">Distributor</td><td class="s26"></td><td class="s26"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">dcterms:contributor (Distributor)</td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr"></td><td class="s26" dir="ltr">distrbtr</td><td class="s26" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R45" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">46</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21" dir="ltr">scientificType (R)</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td></td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R46" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">47</div></th><td class="s2" dir="ltr">schema:Thing</td><td class="s3" dir="ltr"><a target="_blank" href="http://schema.org/additionalType">additionalType</a></td><td class="s2" dir="ltr">Text/URL</td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21" dir="ltr">contentType</td><td class="s21"></td><td class="s21" dir="ltr">Kind of Data</td><td class="s21" dir="ltr">type</td><td class="s21" dir="ltr">types (M)</td><td class="s21" dir="ltr">ResourceType (M)</td><td class="s21"></td><td class="s21" dir="ltr">dcterms:type</td><td></td><td class="s21" dir="ltr">ResourceType (R)</td><td class="s32" dir="ltr">dataKind</td><td class="s33 softmerge" dir="ltr"><div class="softmerge-inner" style="width: 198px; left: -1px;">Resource Class (M)</div></td><td class="s34"></td><td class="s34"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R47" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">48</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">Data Sources</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">dcterms:source</td><td></td><td class="s21"></td><td class="s32" dir="ltr">dataSrc</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R48" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">49</div></th><td class="s2" dir="ltr">schema:Thing</td><td class="s3" dir="ltr"><a target="_blank" href="https://schema.org/productionDate">productionDate</a></td><td class="s2" dir="ltr">Date</td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">Production Date</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">Date - dcterms:date</td><td></td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R49" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">50</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">Depositor</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">Contributor - dcterms:contributor (Depositor)</td><td></td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R50" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">51</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">Deposit Date</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">dcterms:dateSubmitted</td><td></td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R51" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">52</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s32" dir="ltr">rdf.type</td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R52" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">53</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21" dir="ltr">Provenance</td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td class="s21"></td><td></td><td class="s21"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R53" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">54</div></th><td class="s2" dir="ltr">schema:Thing</td><td class="s3" dir="ltr"><a target="_blank" href="https://schema.org/contentUrl">contentURL</a></td><td class="s2" dir="ltr">URL</td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2" dir="ltr">Online resource (function: &quot;download&quot;): linkage</td><td class="s2" dir="ltr"></td><td class="s2" dir="ltr">access URL</td><td class="s2" dir="ltr">access (M)</td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R54" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">55</div></th><td class="s2" dir="ltr">schema:Thing</td><td class="s2" dir="ltr">subjectOf</td><td class="s2" dir="ltr">CreativeWork/Event</td><td class="s21" dir="ltr">A CreativeWork or Event about this Thing</td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr"></td><td class="s2" dir="ltr"></td><td class="s2" dir="ltr"></td><td class="s2"></td><td class="s2" dir="ltr"></td><td class="s2"></td><td class="s2" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R55" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">56</div></th><td class="s2" dir="ltr">schema:Creativework</td><td class="s2" dir="ltr">about</td><td class="s2" dir="ltr">Thing</td><td class="s2" dir="ltr">The subject matter of the content.
-<br>Inverse property: subjectOf.</td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr"></td><td class="s2" dir="ltr"></td><td class="s2" dir="ltr"></td><td class="s2"></td><td class="s2" dir="ltr"></td><td class="s2"></td><td class="s2" dir="ltr"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R56" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">57</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Subject (O)</td><td class="s2" dir="ltr">Subject</td><td class="s2" dir="ltr">Subject</td><td class="s2"></td><td class="s2" dir="ltr">Tags (O)</td><td class="s2"></td><td class="s2" dir="ltr">Study Topics (R)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R57" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">58</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Source study title (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R58" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">59</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Study identifiers (R)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R59" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">60</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Record key types (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R60" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">61</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Identifier type (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R61" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">62</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Associated consent (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R62" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">63</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Access Type (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R63" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">64</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Access Details (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R64" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">65</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Access Contact (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R65" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">66</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Size, Format</td><td class="s2"></td><td class="s2" dir="ltr">Description, table of contents</td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">Resources (M)</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr><tr style='height:20px;'><th id="0R66" style="height: 20px;" class="row-headers-background"><div class="row-header-wrapper" style="line-height: 20px;">67</div></th><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="freezebar-cell"></td><td class="s2"></td><td class="s2"></td><td class="s2" dir="ltr">DatasetContact (M)</td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td class="s2"></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr></tbody></table></div>
-<script type='text/javascript' nonce='d7K8YaKrjV5iAJqmoxijSw'>
-function posObj(sheet, id, row, col, x, y) {
-  var rtl = false;
-  var sheetElement = document.getElementById(sheet);
-  if (!sheetElement) {
-    sheetElement = document.getElementById(sheet + '-grid-container');
-  }
-  if (sheetElement) {
-    rtl = sheetElement.getAttribute('dir') == 'rtl';
-  }
-  var r = document.getElementById(sheet+'R'+row);
-  var c = document.getElementById(sheet+'C'+col);
-  if (r && c) {
-    var objElement = document.getElementById(id);
-    var s = objElement.style;
-    var t = y;
-    while (r && r != sheetElement) {
-      t += r.offsetTop;
-      r = r.offsetParent;
-    }
-    var offsetX = x;
-    while (c && c != sheetElement) {
-      offsetX += c.offsetLeft;
-      c = c.offsetParent;
-    }
-    if (rtl) {
-      offsetX -= objElement.offsetWidth;
-    }
-    s.left = offsetX + 'px';
-    s.top = t + 'px';
-    s.display = 'block';
-    s.border = '1px solid #000000';
-  }
-};
-function posObjs() {
-};
-posObjs();</script>
+            var TableFilter = (function(myArray) {
+                var search_input;
 
+                function _onInputSearch(e) {
+                    search_input = e.target;
+                    var tables = document.getElementsByClassName(search_input.getAttribute('data-table'));
+                    myArray.forEach.call(tables, function(table) {
+                        myArray.forEach.call(table.tBodies, function(tbody) {
+                            myArray.forEach.call(tbody.rows, function(row) {
+                                var text_content = row.textContent.toLowerCase();
+                                var search_val = search_input.value.toLowerCase();
+                                row.style.display = text_content.indexOf(search_val) > -1 ? '' : 'none';
+                            });
+                        });
+                    });
+                }
+
+                return {
+                    init: function() {
+                        var inputs = document.getElementsByClassName('search-input');
+                        myArray.forEach.call(inputs, function(input) {
+                            input.oninput = _onInputSearch;
+                        });
+                    }
+                };
+            })(Array.prototype);
+
+            document.addEventListener('readystatechange', function() {
+                if (document.readyState === 'complete') {
+                    TableFilter.init();
+                }
+            });
+
+        })(document);
+    </script>
 </body>
 </html>
+
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
