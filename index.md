@@ -3410,7 +3410,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 $('select').change(function(){
     if($(this).val() != "-1")
     {
-    $('table.invisible').hide();
+    $('table.i').hide();
     $('table#'+$(this).val()).show();
     }
 })
