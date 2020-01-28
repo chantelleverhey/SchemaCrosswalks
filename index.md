@@ -9,12 +9,12 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 <html lang="en-US">
 <head>
     <title>Schema.org Crosswalk Table</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <style type="text/css">
     table{
         text-align: left;
     }
-    table.invisible{
+    table.i{
         display: none;
     }
     table, td{
@@ -34,6 +34,8 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
         display: block;
         overflow-x: auto;
         white-space: nowrap;
+        margin-left: auto;
+        margin-right: auto;
     }
     h3 span {
         font-size: 22px;
@@ -47,15 +49,15 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
         margin-top: 32px;
     }
     .wrapper1{
+        float: left;
         overflow-y: auto;
         height: 500px;
-        width: 1000px;
-        margin-left: auto;
-        margin-right: auto;
     }
     </style>
 </head>
 
+<body class="mt32">
+    <div class="container">
 <select>
   <option value="-1">Metadata Standards</option>
   <option value="EOSC">EOSC/EDMI</option>
@@ -73,7 +75,8 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </select>
 
 <div class="wrapper">
-<table id="EOSC" class="invisible">
+<table id="EOSC" class="table table-striped mt32 i">
+<tbody>
 <tr>
   <td>EOSC/EDMI</td>
   <td>description(M)</td>
@@ -246,10 +249,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
+</tbody>
 
-<div class="wrapper">
-<table id="ISO" class="invisible">
+
+<table id="ISO" class="table table-striped mt32 i">
 <tr>
   <td>ISO-19115:2003</td>
   <td>Resource description</td>
@@ -422,10 +425,9 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="Dataverse" class="invisible">
+
+<table id="Dataverse" class="table table-striped mt32 i">
 <tr>
   <td>Dataverse</td>
   <td>Description; DescriptionValue(M)</td>
@@ -598,10 +600,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="DCAT" class="invisible">
+
+
+<table id="DCAT" class="table table-striped mt32 i">
 <tr>
   <td>DCAT</td>
   <td>description(M)</td>
@@ -774,10 +776,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="DATS" class="invisible">
+
+
+<table id="DATS" class="table tablte-striped mt32 i">
 <tr>
   <td>DATS</td>
   <td>description(R)</td>
@@ -950,10 +952,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="Datacite" class="invisible">
+
+
+<table id="Datacite" class="table table-striped mt32 i">
 <tr>
   <td>Datacite</td>
   <td>Description(R)</td>
@@ -1126,10 +1128,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="RIF" class="invisible">
+
+
+<table id="RIF" class="table table-striped mt32 i">
 <tr>
   <td>RIF-CS</td>
   <td>collection/description[@type='brief'] OR collection/description[@type='full']</td>
@@ -1302,10 +1304,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="DC" class="invisible">
+
+
+<table id="DC" class="table table-striped mt32 i">
 <tr>
   <td>DC</td>
   <td>Description - dcterms:description</td>
@@ -1478,10 +1480,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="Bioschema" class="invisible">
+
+
+<table id="Bioschema" class="table table-striped mt32 i">
 <tr>
   <td>Bioschema</td>
   <td>description(M)</td>
@@ -1654,10 +1656,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="B2FIND" class="invisible">
+
+
+<table id="B2FIND" class="table table-striped mt32 i">
 <tr>
   <td>B2FIND</td>
   <td>Description(R)</td>
@@ -1830,10 +1832,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="DDI" class="invisible">
+
+
+<table id="DDI" class="table table-striped mt32 i">
 <tr>
   <td>DDI</td>
   <td></td>
@@ -2006,10 +2008,10 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
   <td>schema:CreativeWork</td>
 </tr>
 </table>
-</div>
 
-<div class="wrapper">
-<table id="ECRIN" class="invisible">
+
+
+<table id="ECRIN" class="table table-striped mt32 i">
 <tr>
   <td>ECRIN </td>
   <td>Description(R)</td>
@@ -2183,8 +2185,7 @@ Link to google docs [sheet](https://docs.google.com/spreadsheets/u/1/d/1P6WH8h4O
 </tr>
 </table>
 </div>
-<body class="mt32">
-    <div class="container">
+
         <h3>
             <span>Filter Table Data</span>
             <input type="search" placeholder="Search..." class="form-control search-input" data-table="crosswalk-list"/>
