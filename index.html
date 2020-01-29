@@ -8,7 +8,7 @@
   <meta name="description" content="">
   <meta name="author" content="">
 
-  <title>Scrolling Nav - Start Bootstrap Template</title>
+  <title>Schema Crosswalks Visualizations</title>
 
   <!-- Bootstrap core CSS -->
   <link href="https://vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -74,10 +74,10 @@
             <a class="nav-link js-scroll-trigger" href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services">Filter Table</a>
+            <a class="nav-link js-scroll-trigger" href="#filter">Filter Table</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact">Search Table</a>
+            <a class="nav-link js-scroll-trigger" href="#search">Search Table</a>
           </li>
         </ul>
       </div>
@@ -87,7 +87,7 @@
   <header class="bg-primary text-white">
     <div class="container text-center">
       <h1>Welcome to Schema Crosswalks</h1>
-      <p class="lead">A landing page template freshly redesigned for Bootstrap 4</p>
+      <p class="lead">Visualizations of Schema Crosswalks</p>
     </div>
   </header>
 
@@ -96,24 +96,18 @@
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>About this page</h2>
-          <p class="lead">This is a great place to talk about your webpage. This template is purposefully unstyled so you can use it as a boilerplate or starting point for you own landing page designs! This template features:</p>
-          <ul>
-            <li>Clickable nav links that smooth scroll to page sections</li>
-            <li>Responsive behavior when clicking nav links perfect for a one page website</li>
-            <li>Bootstrap's scrollspy feature which highlights which section of the page you're on in the navbar</li>
-            <li>Minimal custom CSS so you are free to explore your own unique design options</li>
-          </ul>
+          <p class="lead">This page was created in support of the outputs from the Research Data Alliance <a href="https://www.rd-alliance.org/groups/research-metadata-schemas-wg">Research Metadata Schemas Working Group.</a> Specifically, a crosswalk of <a href="https://schema.org/">schema.org</a> properties and corresponding metadata terms. The <a href="https://docs.google.com/spreadsheets/d/1P6WH8h4OnIVR9UJj3FcOebNUpLnKNBCuvEp3NsLRho4/edit#gid=1789151191">original crosswalk</a> was created by (insert student name) at Monash University in late 2019. The tables below represent the crosswalk when it was ingested into the site in early January 2020 and is not a live read of the original table. The page is intended as a prototype service for the research data management community in support of managers who are investigating options for including <a href="https://schema.org/">schema.org</a> markup into existing well formed metadata.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <section id="services" class="bg-light">
+  <section id="filter" class="bg-light">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Schema Filter Table</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut optio velit inventore, expedita quo laboriosam possimus ea consequatur vitae, doloribus consequuntur ex. Nemo assumenda laborum vel, labore ut velit dignissimos.</p>
+          <p class="lead">This filter allows you to choose a metadata standard from the drop down menu and see all crosswalked terms and <a href="https://schema.org/">schema.org</a> properties. Because the <a href="https://schema.org/">schema.org</a>a properties draw from different classes, the parent class of the <a href="https://schema.org/">schema.org</a> property is also provided.</p>
           <select>
             <option value="-1">Metadata Standards</option>
             <option value="EOSC">EOSC/EDMI</option>
@@ -2215,12 +2209,12 @@
     </div>
   </section>
 
-  <section id="contact">
+  <section id="search">
     <div class="container">
       <div class="row">
         <div class="col-lg-8 mx-auto">
           <h2>Schema Search Table</h2>
-          <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero odio fugiat voluptatem dolor, provident officiis, id iusto! Obcaecati incidunt, qui nihil beatae magnam et repudiandae ipsa exercitationem, in, quo totam.</p>
+          <p class="lead">This table is a free text search over both metadata terms and <a href="https://schema.org/">schema.org</a> properties. Wildcard searches are not supported but partial searches are. For example, a search for "publish*" will not return any records, but the search for "publish" will return "datePublished," "publisher," and "Dataset Publisher."</p>
                   <h3>
             <span>Filter Table Data</span>
             <input type="search" placeholder="Search..." class="form-control search-input" data-table="crosswalk-list"/>
