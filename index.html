@@ -55,6 +55,30 @@
       position: sticky;
       top: 0;
     }
+    .node rect {
+      cursor: move;
+      fill-opacity: .9;
+      shape-rendering: crispEdges;
+    }
+
+    .node text {
+      pointer-events: none;
+      text-shadow: 0 1px 0 #fff;
+    }
+
+    .link {
+      fill: none;
+      stroke: #000;
+      stroke-opacity: .2;
+    }
+
+    .link:hover {
+      stroke-opacity: .5;
+    }
+    svg{
+        display: block;
+        margin: auto;
+    }
   </style>
 
 </head>
@@ -78,6 +102,9 @@
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#search">Search Table</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link js-scroll-trigger" href="#sankey">Sankey Diagram</a>
           </li>
         </ul>
       </div>
@@ -108,7 +135,7 @@
         <div class="col-lg-8 mx-auto">
           <h2>Schema Filter Table</h2>
           <p class="lead">This filter allows you to choose a metadata standard from the drop down menu and see all crosswalked terms and <a href="https://schema.org/">schema.org</a> properties. Because the <a href="https://schema.org/">schema.org</a>a properties draw from different classes, the parent class of the <a href="https://schema.org/">schema.org</a> property is also provided.</p>
-          <select>
+          <select class="form-control filter">
             <option value="-1">Metadata Standards</option>
             <option value="EOSC">EOSC/EDMI</option>
             <option value="ISO">ISO-19115:2003</option>
@@ -2215,10 +2242,10 @@
         <div class="col-lg-8 mx-auto">
           <h2>Schema Search Table</h2>
           <p class="lead">This table is a free text search over both metadata terms and <a href="https://schema.org/">schema.org</a> properties. Wildcard searches are not supported but partial searches are. For example, a search for "publish*" will not return any records, but the search for "publish" will return "datePublished," "publisher," and "Dataset Publisher."</p>
-                  <h3>
+            <h3>
             <span>Filter Table Data</span>
             <input type="search" placeholder="Search..." class="form-control search-input" data-table="crosswalk-list"/>
-        </h3>
+            </h3>
         <div class="wrapper1">
         <table class="table table-striped table-hover mt32 crosswalk-list fixedHead" id="searchTable">
             <thead class="thead-dark">
@@ -3397,6 +3424,206 @@
     </div>
   </section>
 
+  <section id="sankey" class="bg-light">
+      <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+              <h2>Sankey Diagram</h2>
+                <p class="lead">(description of Sankey Diagram)</p>
+                <div class="svgSelect">
+                <select class="form-control svg" onfocus='this.size=5;' onblur='this.size=1;' onchange='this.size=1; this.blur();'>
+                    <option value="-1">Schema.org Property</option>
+                    <option value="desc">description</option>
+                    <option value="id">identifier</option>
+                    <option value="name">name</option>
+                    <option value="altname">alternatName</option>
+                    <option value="url">url</option>
+                    <option value="rellink">relatedLink</option>
+                    <option value="author">author</option>
+                    <option value="citation">citation</option>
+                    <option value="contributor">contributor</option>
+                    <option value="copyholder">copyrightHolder</option>
+                    <option value="copyyear">copyrightYear</option>
+                    <option value="creator">creator</option>
+                    <option value="dateCreated">dateCreated</option>
+                    <option value="dateModified">dateModified</option>
+                    <option value="datePublished">datePublished</option>
+                    <option value="editor">editor</option>
+                    <option value="encoding">encoding</option>
+                    <option value="fileFormat">fileFormat</option>
+                    <option value="funder">funder</option>
+                    <option value="license">license</option>
+                    <option value="producer">producer</option>
+                    <option value="provider">provider</option>
+                    <option value="sponsor">sponsor</option>
+                    <option value="version">version</option>
+                    <option value="isAccessibleForFree">isAccessibleForFree</option>
+                    <option value="isPartOf">isPartOf</option>
+                    <option value="hasPart">hasPart</option>
+                    <option value="position">position</option>
+                    <option value="spatialCoverage">spatialCoverage</option>
+                    <option value="temporalCoverage">temporalCoverage</option>
+                    <option value="distribution">distribution</option>
+                    <option value="includedInDataCatalog">includedInDataCatalog</option>
+                    <option value="measurementTechnique">measurementTechnique</option>
+                    <option value="variableMeasured">variableMeasured</option>
+                    <option value="dataset">dataset</option>
+                    <option value="measurementTechnique">measurementTechnique</option>
+                    <option value="sourceOrganization">sourceOrganization</option>
+                    <option value="inLanguage">inLanguage</option>
+                    <option value="additionalType">additionalType</option>
+                    <option value="productionDate">productionDate</option>
+                    <option value="contentURL">contentURL</option>
+                    <option value="subjectOf">subjectOf</option>
+                    <option value="about">about</option>
+                </select>
+                </div>
+                <div class="sankey" id="desc">
+                <script src="https://d3js.org/d3.v4.min.js"></script>
+                <script src="sankey.js"></script>
+                
+                <script>
+                    
+                var units = "Counts";
+
+                // set the dimensions and margins of the graph
+                var margin = {top: 10, right: 10, bottom: 10, left: 10},
+                    width = 1000 - margin.left - margin.right,
+                    height = 500 - margin.top - margin.bottom;
+
+                // format variables
+                var formatNumber = d3.format(",.0f"),    // zero decimal places
+                    format = function(d) { return formatNumber(d) + " " + units; },
+                    color = d3.scaleOrdinal(d3.schemeCategory10);
+
+                // append the svg object to the body of the page
+                var svg = d3.select("body").append("svg")
+                    .attr("width", width + margin.left + margin.right)
+                    .attr("height", height + margin.top + margin.bottom)
+                .append("g")
+                    .attr("transform", 
+                        "translate(" + margin.left + "," + margin.top + ")");
+
+                // Set the sankey diagram properties
+                var sankey = d3.sankey()
+                    .nodeWidth(36)
+                    .nodePadding(40)
+                    .size([width, height]);
+
+                var path = sankey.link();
+
+                // load the data
+                d3.csv("sankey.csv", function(error, data) {
+                
+                //set up graph in same style as original example but empty
+                graph = {"nodes" : [], "links" : []};
+
+                data.forEach(function (d) {
+                    graph.nodes.push({ "name": d.source });
+                    graph.nodes.push({ "name": d.target });
+                    graph.links.push({ "source": d.source,
+                                    "target": d.target,
+                                    "value": +d.value });
+                });
+
+                // return only the distinct / unique nodes
+                graph.nodes = d3.keys(d3.nest()
+                    .key(function (d) { return d.name; })
+                    .object(graph.nodes));
+
+                // loop through each link replacing the text with its index from node
+                graph.links.forEach(function (d, i) {
+                    graph.links[i].source = graph.nodes.indexOf(graph.links[i].source);
+                    graph.links[i].target = graph.nodes.indexOf(graph.links[i].target);
+                });
+
+                // now loop through each nodes to make nodes an array of objects
+                // rather than an array of strings
+                graph.nodes.forEach(function (d, i) {
+                    graph.nodes[i] = { "name": d };
+                });
+
+                sankey
+                    .nodes(graph.nodes)
+                    .links(graph.links)
+                    .layout(32);
+
+                // add in the links
+                var link = svg.append("g").selectAll(".link")
+                    .data(graph.links)
+                    .enter().append("path")
+                    .attr("class", "link")
+                    .attr("d", path)
+                    .style("stroke-width", function(d) { return Math.max(1, d.dy); })
+                    .sort(function(a, b) { return b.dy - a.dy; });
+
+                // add the link titles
+                link.append("title")
+                        .text(function(d) {
+                            return d.source.name + " → " + 
+                                d.target.name + "\n" + format(d.value); });
+
+                // add in the nodes
+                var node = svg.append("g").selectAll(".node")
+                    .data(graph.nodes)
+                    .enter().append("g")
+                    .attr("class", "node")
+                    .attr("transform", function(d) { 
+                        return "translate(" + d.x + "," + d.y + ")"; })
+                    .call(d3.drag()
+                        .subject(function(d) {
+                        return d;
+                        })
+                        .on("start", function() {
+                        this.parentNode.appendChild(this);
+                        })
+                        .on("drag", dragmove));
+
+                // add the rectangles for the nodes
+                node.append("rect")
+                    .attr("height", function(d) { return d.dy; })
+                    .attr("width", sankey.nodeWidth())
+                    .style("fill", function(d) { 
+                        return d.color = color(d.name.replace(/ .*/, "")); })
+                    .style("stroke", function(d) { 
+                        return d3.rgb(d.color).darker(2); })
+                    .append("title")
+                    .text(function(d) { 
+                        return d.name + "\n" + format(d.value); });
+
+                // add in the title for the nodes
+                node.append("text")
+                    .attr("x", -6)
+                    .attr("y", function(d) { return d.dy / 2; })
+                    .attr("dy", ".35em")
+                    .attr("text-anchor", "end")
+                    .attr("transform", null)
+                    .text(function(d) { return d.name; })
+                    .filter(function(d) { return d.x < width / 2; })
+                    .attr("x", 6 + sankey.nodeWidth())
+                    .attr("text-anchor", "start");
+
+                // the function for moving the nodes
+                function dragmove(d) {
+                    d3.select(this)
+                    .attr("transform", 
+                            "translate(" 
+                            + d.x + "," 
+                            + (d.y = Math.max(
+                                0, Math.min(height - d.dy, d3.event.y))
+                                ) + ")");
+                    sankey.relayout();
+                    link.attr("d", path);
+                }
+                });
+
+                </script>
+            </div>
+            </div>
+        </div>
+      </div>
+  </section>
+
   <!-- Footer -->
   <footer class="py-5 bg-dark">
     <div class="container">
@@ -3406,7 +3633,7 @@
   </footer>
 
   <!-- Bootstrap core JavaScript -->
-  <script src="./vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/jquery/jquery.min.js"></script>
   <script src="./vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
   <!-- Plugin JavaScript -->
@@ -3417,11 +3644,20 @@
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script>
-$('select').change(function(){
+$('select.filter').change(function(){
     if($(this).val() != "-1")
     {
     $('table.i').hide();
     $('table#'+$(this).val()).show();
+    }
+})
+</script>
+<script>
+$('select.svg').change(function(){
+    if($(this).val() != "-1")
+    {
+        $('div.sankey').hide();
+        $('div#'+$(this).val()).show();
     }
 })
 </script>
