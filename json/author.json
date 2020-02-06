@@ -1,6 +1,6 @@
 [
   {"from": "author - schema:CreativeWork","to": "Author; authorName(M)","value": 1},
-  {"from": "Author: authorName(M)","to": "Dataverse","value": 1},
+  {"from": "Author; authorName(M)","to": "Dataverse","value": 1},
   {"from": "author - schema:CreativeWork","to": "creator","value": 1},
   {"from": "creator","to": "Datacite","value": 1},
   {"from": "author - schema:CreativeWork","to": "Creator","value": 1},

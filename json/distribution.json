@@ -1,5 +1,5 @@
 [
-  {"from": "distribution - schema:Dataset","to": "distrubution(R)","value": 2},
+  {"from": "distribution - schema:Dataset","to": "distribution(R)","value": 2},
   {"from": "distribution(R)","to": "EOSC/EDMI","value": 1},
   {"from": "distribution(R)","to": "DATS","value": 1},
   {"from": "distribution - schema:Dataset","to": "Distribution information","value": 1},

@@ -6,7 +6,7 @@
   {"from": "name - schema:Thing","to": "name(M)","value": 2},
   {"from": "name(M)","to": "EOSC/EDMI","value": 1},
   {"from": "name(M)","to": "BioSchema","value": 1},
-  {"from": "name- schema:Thing","to": "title(M)","value": 2},
+  {"from": "name - schema:Thing","to": "title(M)","value": 2},
   {"from": "title(M)","to": "DCAT","value": 1},
   {"from": "title(M)","to": "DATs","value": 1},
   {"from": "name - schema:Thing","to": "Resource title(M)","value": 1},

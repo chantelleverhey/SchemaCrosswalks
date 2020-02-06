@@ -9,7 +9,7 @@
   {"from": "Description(R)","to": "ECRIN","value": 1},
   {"from": "description - schema:Thing","to": "Resource description","value": 1},
   {"from": "Resource description","to": "ISO-19115:2003","value": 1},
-  {"from": "description","to": "Description - dcterms:description","value": 1},
+  {"from": "description - schema:Thing","to": "Description - dcterms:description","value": 1},
   {"from": "Description - dcterms:description","to": "DC","value": 1},
   {"from": "description - schema:Thing","to": "description(R)","value": 1},
   {"from": "description(R)","to": "DATS","value": 1},
