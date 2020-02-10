@@ -15,6 +15,6 @@
   {"from": "Publisher(R)","to": "B2FIND","value": 1},
   {"from": "publisher - schema:CreativeWork","to": "distrbtr","value": 1},
   {"from": "distrbtr","to": "DDI","value": 1},
-  {"from": "publihser - schema:CreativeWork","to": "Publisher/Provider(M)","value": 1},
+  {"from": "publisher - schema:CreativeWork","to": "Publisher/Provider(M)","value": 1},
   {"from": "Publisher/Provider(M)","to": "ECRIN","value": 1}
 ]
