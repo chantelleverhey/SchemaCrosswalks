@@ -8,7 +8,7 @@
   {"from": "name(M)","to": "BioSchema","value": 1},
   {"from": "name - schema:Thing","to": "title(M)","value": 2},
   {"from": "title(M)","to": "DCAT","value": 1},
-  {"from": "title(M)","to": "DATs","value": 1},
+  {"from": "title(M)","to": "DATS","value": 1},
   {"from": "name - schema:Thing","to": "Resource title(M)","value": 1},
   {"from": "Resource title(M)","to": "ISO-19115:2003","value": 1},
   {"from": "name - schema:Thing","to": "registryObject:collection:name(Title as displayed in RDA)","value": 1},
