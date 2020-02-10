@@ -1,7 +1,7 @@
 [
   {"from": "keywords - schema:CreativeWork","to": "keywords","value": 2},
   {"from": "keywords","to": "DCAT","value": 1},
-  {"from": "keywords","to": "DDi","value": 1},
+  {"from": "keywords","to": "DDI","value": 1},
   {"from": "keywords - schema:CreativeWork","to": "keywords(R)","value": 1},
   {"from": "keywords(R)","to": "EOSC/EDMI","value": 1},
   {"from": "keywords - schema:CreativeWork","to": "Descriptive keywords","value": 1},
