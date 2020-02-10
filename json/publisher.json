@@ -1,6 +1,6 @@
 [
   {"from": "publisher - schema:CreativeWork","to": "Responsible party(role:\"publisher\")","value": 1},
-  {"from": "Responsible part(role:\"publisher\")","to": "ISO-19115:2003","value": 1},
+  {"from": "Responsible party(role:\"publisher\")","to": "ISO-19115:2003","value": 1},
   {"from": "publisher - schema:CreativeWork","to": "Dataset Publisher","value": 1},
   {"from": "Dataset Publisher","to": "Dataverse","value": 1},
   {"from": "publisher - schema:CreativeWork","to": "publisher(M)","value": 1},
