@@ -6,7 +6,7 @@
   {"from": "keywords(R)","to": "EOSC/EDMI","value": 1},
   {"from": "keywords - schema:CreativeWork","to": "Descriptive keywords","value": 1},
   {"from": "Descriptive keywords","to": "ISO-19116:2003","value": 1},
-  {"from": "keywords - schema:CreativeWork","to": "Subject(M); Topic Classification Term; keywords","value": 1},
+  {"from": "keywords - schema:CreativeWork","to": "Subject(M); Topic Classification Term; Keywords","value": 1},
   {"from": "Subject(M); Topic Classification Term; Keywords","to": "Dataverse","value": 1},
   {"from": "keywords - schema:CreativeWork","to": "keywords(O)","value": 1},
   {"from": "keywords(O)","to": "DATS","value": 1},
