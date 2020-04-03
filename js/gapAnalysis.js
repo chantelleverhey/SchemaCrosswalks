@@ -1,20 +1,7 @@
+$.getJSON("https://ito-coop.github.io/SchemaCrosswalks/json/gapAnalysis.json", gapAnalysis);
+function gapAnalysis(data)
 var chart = am4core.create("gapAnalysis", am4charts.TreeMap);
-chart.data = [{
-  "name": "First",
-  "value": 190
-}, {
-  "name": "Second",
-  "value": 289
-}, {
-  "name": "Third",
-  "value": 635
-}, {
-  "name": "Fourth",
-  "value": 732
-}, {
-  "name": "Fifth",
-  "value": 835
-}];
+chart.data = data
 
 /* Set color step */
 chart.colors.step = 2;
