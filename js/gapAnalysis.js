@@ -26,5 +26,5 @@ level1_bullet.locationX = 0.5;
 level1_bullet.label.text = "{name}";
 level1_bullet.label.fill = am4core.color("#fff");
 
-chart.layoutAlgorithm = chart.sliceDice;
+chart.layoutAlgorithm = chart.binaryTree;
 }
