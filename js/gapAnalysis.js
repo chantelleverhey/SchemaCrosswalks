@@ -1,4 +1,4 @@
-var chart = am4core.create("chartdiv", am4charts.TreeMap);
+var chart = am4core.create("gapAnalysis", am4charts.TreeMap);
 chart.data = [{
   "name": "First",
   "value": 190
