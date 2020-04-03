@@ -2,7 +2,7 @@ $.getJSON("https://ito-coop.github.io/SchemaCrosswalks/json/gapAnalysis.json", g
 function gapAnalysis(data){
 var chart = am4core.create("gapAnalysis", am4charts.TreeMap);
 chart.data = data;
-
+chart.layoutAlgorithm = chart.binaryTree;
 /* Set color step */
 chart.colors.step = 2;
 
@@ -26,5 +26,5 @@ level1_bullet.locationX = 0.5;
 level1_bullet.label.text = "{name}";
 level1_bullet.label.fill = am4core.color("#fff");
 
-chart.layoutAlgorithm = chart.binaryTree;
+
 }
