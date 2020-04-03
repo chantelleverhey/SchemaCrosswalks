@@ -2,7 +2,7 @@
   {"name": "EOSC/EDMI", "value": 27},
   {"name": "ISO-19115:2003", "value": 36},
   {"name": "Dataverse", "value": 30},
-  {"nane": "DCAT", "value": 27},
+  {"name": "DCAT", "value": 27},
   {"name": "DCATv2", "value": 5},
   {"name": "DATS", "value": 33},
   {"name": "Datacite", "value": 28},
