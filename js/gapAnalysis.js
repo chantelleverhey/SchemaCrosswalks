@@ -1,5 +1,5 @@
 $.getJSON("https://ito-coop.github.io/SchemaCrosswalks/json/gapAnalysis.json", gapAnalysis);
-function gapAnalysis(data)
+function gapAnalysis(data){
 var chart = am4core.create("gapAnalysis", am4charts.TreeMap);
 chart.data = data
 
@@ -27,3 +27,4 @@ level1_bullet.label.text = "{name}";
 level1_bullet.label.fill = am4core.color("#fff");
 
 chart.layoutAlgorithm = chart.sliceDice;
+}
